@@ -79,15 +79,7 @@ For VRChat avatar projects, use the Unity version and VRChat Creator Companion s
 
 ## Updating
 
-The bottom of the Shader Master material inspector includes **Check for Updates** and **Support MSage on Discord**. The updater compares the installed `Version.txt` against this repository's `latest.json`, then links to the matching release when a newer version is available. The support button opens the MSage Discord, where creators can join the community and become supporters of continued Shader Master development.
-
-Every release publishes a SHA-256 hash. You can verify a downloaded package in PowerShell:
-
-```powershell
-Get-FileHash "Shader.Master.by.MSage-v0.4.31.unitypackage" -Algorithm SHA256
-```
-
-GitHub normalizes spaces in uploaded release-asset names to periods. Compare the result with both the GitHub release notes and `latest.json` before importing.
+The bottom of the Shader Master material inspector includes **Check for Updates** and **Support MSage on Discord**. The updater compares the installed `Version.txt` against this repository's update metadata, then links to the matching release when a newer version is available. The support button opens the MSage Discord, where creators can join the community and become supporters of continued Shader Master development.
 
 ## Documentation
 

@@ -9,4 +9,4 @@
 - Added generated Radial Puppet, On/Off, and Dissolve FX workflows.
 - Added expression parameter creation, default toggle-state controls, menu selection/creation, and Write Defaults On for generated states.
 - Added editor-only AudioLink preview controls with upload/build safety resets.
-- Added the material-inspector update checker and dedicated versioned exporter with SHA-256 output.
+- Added the material-inspector update checker.
