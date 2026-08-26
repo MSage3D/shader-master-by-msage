@@ -84,10 +84,10 @@ The bottom of the Shader Master material inspector includes **Check for Updates*
 Every release publishes a SHA-256 hash. You can verify a downloaded package in PowerShell:
 
 ```powershell
-Get-FileHash "Shader Master by MSage-v0.4.31.unitypackage" -Algorithm SHA256
+Get-FileHash "Shader.Master.by.MSage-v0.4.31.unitypackage" -Algorithm SHA256
 ```
 
-Compare the result with both the GitHub release notes and `latest.json` before importing.
+GitHub normalizes spaces in uploaded release-asset names to periods. Compare the result with both the GitHub release notes and `latest.json` before importing.
 
 ## Documentation
 
