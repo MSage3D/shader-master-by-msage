@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Complete feature guide and reference wiki for Shader Master by MSage for Unity and VRChat creators.">
+  <title>Shader Master by MSage Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to article</a>
+  <div class="site-shell">
+    <header class="topbar">
+      <button class="nav-toggle" type="button" aria-label="Open wiki navigation" aria-expanded="false">☰</button>
+      <a class="brand" href="#top" aria-label="Shader Master by MSage Wiki home">
+        <img src="assets/msage-logo.png" alt="MSage 3D">
+        <span><b>Shader Master</b><small>by MSage · Creator Wiki</small></span>
+      </a>
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <span class="sr-only">Search this wiki</span>
+        <input id="wiki-search" type="search" placeholder="Search features, settings, or effects…" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <button class="expand-all" type="button">Expand all</button>
+    </header>
+
+    <aside class="sidebar" aria-label="Wiki navigation">
+      <div class="sidebar-title">On this page</div>
+      <nav id="wiki-nav">
+        <a href="#overview">Overview</a>
+        <a href="#quick-start">Quick start</a>
+        <a href="#inspector-workflow">Inspector workflow</a>
+        <a href="#main">Main</a>
+        <a href="#shading">Shading</a>
+        <a href="#special-effects">Special Effects</a>
+        <a href="#text-tools">Text Tools</a>
+        <a href="#dissolves">Dissolves & Transformations</a>
+        <a href="#creator-tools">Creator Tools</a>
+        <a href="#render-settings">Render Settings</a>
+        <a href="#optimization">Optimization & platforms</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#image-plan">Image plan</a>
+      </nav>
+      <div class="sidebar-note">
+        <span class="status-dot"></span>
+        <div><b>Documentation status</b><small>Built from the current Unity inspector source.</small></div>
+      </div>
+    </aside>
+
+    <main id="article" class="article">
+      <section id="top" class="hero searchable">
+        <div class="hero-copy">
+          <p class="eyebrow">Official creator reference</p>
+          <h1>Shader Master <small>by MSage</small></h1>
+          <p class="hero-lead">A layered Unity shader for stylized characters, props, name tags, transformations, reactive materials, and high-impact VRChat visuals—all organized through one creator-focused material inspector.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#quick-start">Start here</a>
+            <a class="button secondary" href="#feature-index">Browse features</a>
+          </div>
+          <ul class="hero-facts" aria-label="Shader summary">
+            <li><b>6</b><span>Inspector categories</span></li>
+            <li><b>10</b><span>Special-effect systems</span></li>
+            <li><b>16</b><span>Rim-light modes</span></li>
+            <li><b>17</b><span>Transformation presets</span></li>
+          </ul>
+        </div>
+        <figure class="media-slot media-slot--hero has-image">
+          <a href="assets/screenshots/shader-master-unity-overview.jpg" target="_blank" rel="noopener"><img src="assets/screenshots/shader-master-unity-overview.jpg" alt="Shader Master inspector and Creator Tools open together in Unity"></a>
+          <div><b>Shader Master inside Unity</b><small>The themed material inspector and Creator Tools working side by side.</small></div>
+        </figure>
+      </section>
+
+      <div id="search-empty" class="search-empty" hidden>
+        <b>No matching wiki sections</b>
+        <span>Try a feature name such as “Galaxy,” “Rim,” “Name Tag,” or “Transparency.”</span>
+      </div>
+
+      <section id="overview" class="wiki-section searchable">
+        <div class="section-heading">
+          <span class="section-kicker">Introduction</span>
+          <h2>What the shader is built to do</h2>
+          <p>Shader Master by MSage combines everyday material controls with stylized shading, procedural effects, shader-native text, transformation animation, VRChat-aware visibility, and reusable creator workflows. Most systems are opt-in, so a material can remain simple or grow into a full showcase effect.</p>
+        </div>
+        <div id="feature-index" class="feature-index">
+          <a href="#main"><span>01</span><b>Main</b><small>Textures, emissions, MatCaps, color</small></a>
+          <a href="#shading"><span>02</span><b>Shading</b><small>Shadows, rims, surfaces, wear</small></a>
+          <a href="#special-effects"><span>03</span><b>Special Effects</b><small>Ten modular FX systems</small></a>
+          <a href="#text-tools"><span>04</span><b>Text Tools</b><small>Name, large, and typing text</small></a>
+          <a href="#dissolves"><span>05</span><b>Transformations</b><small>Dissolve, edge, motion, tiles</small></a>
+          <a href="#render-settings"><span>06</span><b>Render Settings</b><small>Transparency, VRChat, quality</small></a>
+        </div>
+        <div class="callout good"><b>Non-destructive by design</b><p>Most major features have their own enable toggle, local controls, reset button, and scoped copy/paste tools. Start with the minimum systems you need and add complexity deliberately.</p></div>
+      </section>
+
+      <section id="quick-start" class="wiki-section searchable">
+        <div class="section-heading">
+          <span class="section-kicker">First material</span>
+          <h2>Quick start</h2>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><div><b>Create or select a Material</b><p>In Unity, create a new Material asset or select an existing material assigned to your mesh.</p></div></li>
+          <li><span>2</span><div><b>Choose MSage/Shader Master</b><p>Open the Shader dropdown on the material and select <code>MSage/Shader Master</code>. The custom MSage inspector will replace Unity’s default property list.</p></div></li>
+          <li><span>3</span><div><b>Build the base surface</b><p>Set Base Color, Base Color Texture, Normal Map, and optional Alpha Map. Confirm the correct UV channel and set panning to zero for stationary textures.</p></div></li>
+          <li><span>4</span><div><b>Choose shading and rendering</b><p>Select a shadow style and transparency mode before tuning effects. Opaque is the simplest and most reliable starting point.</p></div></li>
+          <li><span>5</span><div><b>Add one feature at a time</b><p>Enable a section, tune it, and test in the lighting and camera contexts your audience will actually use.</p></div></li>
+        </ol>
+        <div class="media-grid two">
+          <figure class="media-slot" data-image-id="IMG-02"><span class="media-number">IMG-02</span><div><b>Shader selection</b><small>Material Inspector with MSage/Shader Master highlighted</small></div></figure>
+          <figure class="media-slot" data-image-id="IMG-03"><span class="media-number">IMG-03</span><div><b>Clean first material</b><small>Main category with a base texture and normal map assigned</small></div></figure>
+        </div>
+      </section>
+
+      <section id="inspector-workflow" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Creator workflow</span><h2>Understanding the inspector</h2><p>The inspector uses a three-level hierarchy: purple category headers, violet feature sections, and compact orange sub-sections. Foldout states stay organized per material during the Unity session.</p></div>
+        <div class="card-grid three">
+          <article class="info-card"><i>⌕</i><h3>Search Settings</h3><p>Filters category names, section names, displayed labels, and internal shader property names. Use it to jump directly to a setting in a large material.</p></article>
+          <article class="info-card"><i>▣</i><h3>Copy & Paste</h3><p>Copying a category captures only that category. Copying a section captures only that section. Paste activates only for the same scope on compatible MSage materials and works with multi-selection.</p></article>
+          <article class="info-card"><i>✓</i><h3>Save & Reset</h3><p>Save promotes the current scope values into shader defaults after confirmation. Reset restores the current shader defaults. Both actions are separate from saving a material preset.</p></article>
+          <article class="info-card"><i>◆</i><h3>Material presets</h3><p>The Preset menu lists saved <code>.mat</code> presets alphabetically and keeps <b>Save new Preset</b> last. Selecting a preset applies it to all selected materials.</p></article>
+          <article class="info-card"><i>?</i><h3>External hover help</h3><p>Inspector hover text is loaded from <code>ShaderMasterTooltips.txt</code>. Edit its key/value entries without searching through the C# inspector script.</p></article>
+          <article class="info-card"><i>↺</i><h3>Undo-aware editing</h3><p>Inspector actions register Unity Undo and mark affected materials dirty. After a paste or preset, inspect the result before saving the scene or project.</p></article>
+        </div>
+        <figure class="media-slot media-slot--wide has-image"><a href="assets/screenshots/shader-master-unity-overview.jpg" target="_blank" rel="noopener"><img src="assets/screenshots/shader-master-unity-overview.jpg" alt="Full Shader Master material inspector with searchable categories and Creator Tools"></a><div><b>Full inspector anatomy</b><small>Shader Master branding, search, categories, sections, effect toggles, and Creator Tools in the live Unity project.</small></div></figure>
+        <div class="callout warn"><b>Save means two different things</b><p>The checkmark on a category or section changes the shader’s defaults for future materials. <b>Save new Preset</b> creates a reusable material asset. Use the preset workflow when you want named looks without changing global defaults.</p></div>
+      </section>
+
+      <section id="main" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Category 01</span><h2>Main</h2><p>Build the core surface here: base color and maps, up to four emission layers, up to four MatCaps, and final color correction.</p></div>
+        <div class="doc-accordion">
+          <details open><summary><span>Main Textures</span><small>Base Color, Normal, and Alpha</small></summary><div class="details-body"><p><b>Base Color</b> multiplies the texture and supplies color when no texture is assigned. <b>Base Color Texture</b> includes tiling, offset, panning, UV0–UV3 selection, and optional alpha contribution. <b>Normal Map</b> adds tangent-space lighting detail. <b>Alpha Map</b> supplies visibility, an Alpha Cutoff for clipping modes, and an inversion toggle.</p><div class="mini-grid"><div><b>Use Transparency</b><span>Multiplies the Alpha Map by Base Color Texture alpha.</span></div><div><b>Alpha Cutoff</b><span>Discards pixels under the threshold in clipping modes.</span></div><div><b>Inverted Colors</b><span>Swaps the visible and transparent areas of the Alpha Map.</span></div></div></div></details>
+          <details><summary><span>Emissions</span><small>Four independent glow layers</small></summary><div class="details-body"><p>Choose one to four emission layers. Every enabled layer has a color texture, HDR emission color and strength, an independent mask, UV mapping, tiling, panning, and Base Color blending controls. AudioLink can animate emission between per-layer minimum and maximum strengths using a chosen frequency band.</p><p><b>Use Base Color</b> tints emission with the surface. <b>Override Base Color</b> lets emission replace the underlying color where its mask is visible.</p></div></details>
+          <details><summary><span>MatCaps</span><small>Four camera-relative material layers</small></summary><div class="details-body"><p>MatCaps project a pre-lit texture based on the surface normal relative to the camera. Each of the four possible layers has a texture, tint, strength, Add/Multiply/Overlay/Replace blend mode, rotation, scale, and independent mask.</p><p>Use MatCaps for stylized metal, glossy plastic, baked reflections, velvet, or illustrated lighting. They are view-dependent, so always rotate the camera during tuning.</p></div></details>
+          <details><summary><span>General Adjustments</span><small>Final color finishing</small></summary><div class="details-body"><p>Saturation controls color intensity; Contrast expands or compresses tonal differences; Brightness scales the result; Gamma reshapes midtones; Exposure behaves like a photographic exposure adjustment; Hue Shift rotates colors around the color wheel.</p></div></details>
+        </div>
+        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-05"><span class="media-number">IMG-05</span><div><b>Main category UI</b><small>Main Textures, Emissions, MatCaps, and General Adjustments expanded</small></div></figure><figure class="media-slot" data-image-id="IMG-06"><span class="media-number">IMG-06</span><div><b>Emission & MatCap example</b><small>Before/after or side-by-side surface render</small></div></figure></div>
+      </section>
+
+      <section id="shading" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Category 02</span><h2>Shading</h2><p>Control how the material responds to light and what its surface is made of.</p></div>
+        <div class="doc-accordion">
+          <details open><summary><span>Shadows</span><small>5 lighting models</small></summary><div class="details-body"><table><thead><tr><th>Mode</th><th>Best for</th><th>Key controls</th></tr></thead><tbody><tr><td>Cell Shading</td><td>Graphic, anime, or posterized light steps</td><td>Step count, offset, softness, strength</td></tr><tr><td>Stylized</td><td>Controlled soft-toon shading</td><td>Threshold, softness, light wrap, contrast</td></tr><tr><td>Realistic</td><td>Natural direct and ambient balance</td><td>Strength, softness, ambient, direct light</td></tr><tr><td>Hyper Cell Shading</td><td>Sharper, more dramatic stepped lighting</td><td>Uses the hyper response with cell-shaped presentation</td></tr><tr><td>Hyper Realistic</td><td>High-contrast detail and self-shadow emphasis</td><td>Self Shadow Bias and Occlusion Detail in addition to hyper light controls</td></tr></tbody></table><p>All modes share Shadow Color, an optional animated Shadow Color Texture, and an Ambient Occlusion Mask with strength and inversion.</p></div></details>
+          <details><summary><span>Rim Lighting</span><small>16 selectable types</small></summary><div class="details-body"><p>All rim modes share Rim Color, Intensity, Width, Fresnel Power, and Edge Softness. The selected type adds specialized controls:</p><div class="tag-list"><span>Standard</span><span>Multiple Layers</span><span>Colored</span><span>Gradient</span><span>Texture Masked</span><span>Animated</span><span>Audio Reactive</span><span>Distance Based</span><span>Light Direction Based</span><span>Camera Angle</span><span>Rainbow</span><span>Pulsating</span><span>Inner Rim</span><span>Outer Rim</span><span>Shadow Only</span><span>Highlight Only</span></div><p>Texture Masked adds a UV-aware mask; Audio Reactive adds AudioLink min/max and band selection; Distance Based blends between near and far intensity; Camera Angle uses start and end angles; Rainbow and Pulsating add time-based color or intensity animation.</p></div></details>
+          <details><summary><span>Metallic & Roughness</span><small>Physically inspired surface response</small></summary><div class="details-body"><p>Metallic and roughness each support their own texture, UV channel, panning, and influence. Metallic adds reflection and specular strength. Roughness supports inversion so smoothness maps can be reused as roughness inputs.</p></div></details>
+          <details><summary><span>Procedural Jewelry</span><small>Metal, gems, engraving, wear, and charge</small></summary><div class="details-body"><p>A shared Jewelry Mask defines where the system appears. Start from Gold, Silver, Rose Gold, Platinum, Black Metal, or Custom. Layer a fake-depth gem inlay, ornamental engraving, fine scratches and dust, edge sparkle, and a pulsing magical charge.</p></div></details>
+          <details><summary><span>Weathering</span><small>Age and storytelling detail</small></summary><div class="details-body"><p>History/Age, scale, and contrast drive the overall breakup. Surface Damage adds paint chips, tarnish, crease dirt, edge scratches, and faded fabric. Cracked Emission adds a glowing crack network. Moss or Frost Buildup can use a built-in look or a custom buildup color.</p></div></details>
+          <details><summary><span>Advanced Surfaces</span><small>5 specialist material models</small></summary><div class="details-body"><p>A shared Surface FX Mask limits all advanced responses. <b>Clear Coat</b> adds a smooth transparent top layer. <b>Anisotropic Highlights</b> stretch and rotate highlights. <b>Skin</b> adds wrapped lighting, subsurface color, backscatter, softness, and oiliness. <b>Cloth</b> adds grazing-angle sheen and fiber highlights. <b>Wetness</b> darkens and smooths the surface while strengthening reflections and specular.</p></div></details>
+        </div>
+        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-07"><span class="media-number">IMG-07</span><div><b>Shading category UI</b><small>Shadows and Rim Lighting expanded</small></div></figure><figure class="media-slot" data-image-id="IMG-08"><span class="media-number">IMG-08</span><div><b>Surface material comparison</b><small>Metal, jewelry, weathering, skin, cloth, and wetness examples</small></div></figure></div>
+      </section>
+
+      <section id="special-effects" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Category 03</span><h2>Special Effects</h2><p>Each effect is independently enabled and can be copied, saved, reset, masked, and—where exposed—hidden from VRChat mirrors or VRCCam.</p></div>
+        <div class="effect-grid">
+          <article><span>01</span><h3>Outline FX</h3><p>Choose None, Simple geometry expansion, view-angle Rim, animated Doodle Noise, or layered Sticker outlines. Shared color textures, masks, and AudioLink can turn an outline into a reactive accent.</p><b>Watch:</b><small>Outline shell visibility depends on culling, ZTest, transparency, depth writing, and camera context.</small></article>
+          <article><span>02</span><h3>Galaxy FX</h3><p>Procedural deep-space color, three nebula colors, flow distortion, star field, pixel-sized stars, twinkle, opacity, mask, and a Fresnel Edge Transition that can incorporate the Base Color Texture.</p><b>Signature control:</b><small>Base Texture Influence at zero produces pure Edge Color; black remains intentionally visible.</small></article>
+          <article><span>03</span><h3>Glitter FX</h3><p>Surface glitter with color, scale, density, angular visibility, mask, sparkle timing, and AudioLink response. Use fine scale and restrained density for material sparkle; increase them for magical effects.</p></article>
+          <article><span>04</span><h3>Force Field FX</h3><p>Five procedural types—Digital Grid, Magic Rings, Hex Grid, Energy Waves, and Plasma—with common texture, mask, output opacity, intersection glow, edge glow, animation, distortion, and type-specific controls.</p></article>
+          <article><span>05</span><h3>PlayStation FX</h3><p>Retro rendering through virtual resolution, vertex snapping and jitter, affine texture distortion, low-poly lighting, RGB quantization, multiple dithers, scanlines, pixel noise, fixed-rate artifacts, and vignette.</p><b>Best practice:</b><small>Raise the master Effect Strength gradually so you can see which artifact changes the look.</small></article>
+          <article><span>06</span><h3>Hologram FX</h3><p>A dense code-hologram system with Mesh UV, Object Space, Screen Space, Cylindrical, Spherical, and Tri-plane mapping; glyph dimensions and fill; texture override; scanlines; data bands; glitches; dropout; tears; flicker; pulse; and edge glow.</p></article>
+          <article><span>07</span><h3>Eye FX</h3><p>Procedural eye construction with UV setup, mask, five pupil shapes, manual and darkness-driven dilation, iris gradients and patterns, parallax depth, look tracking, reflections, catchlights, wetness, sparkle, emission, tears, blink, and bloodshot detail.</p></article>
+          <article><span>08</span><h3>Dream FX</h3><p>Painterly color flow, camera-distance stabilization, temporal-style color trails, chromatic separation, dissolving edges, outline echoes, and a floating memory image layer.</p><b>Note:</b><small>“Temporal” styling is shader-driven; it does not store previous camera frames.</small></article>
+          <article><span>09</span><h3>Temporal Split FX</h3><p>Motion-reactive colored silhouettes with one to four layers, screen offset, spacing, maximum separation, frame stagger, snapshot hold, drift, electrical breakup, scanline tearing, and chromatic split.</p></article>
+          <article><span>10</span><h3>Living Illustration FX</h3><p>Ink and paper rendering with an optional paper texture, redrawn outlines, line boil, limited animation frame rate, crosshatched shadows, watercolor bleeding, misregistered color layers, and palette locking.</p></article>
+        </div>
+        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-09"><span class="media-number">IMG-09</span><div><b>Special Effects UI</b><small>All effect headers visible in the inspector</small></div></figure><figure class="media-slot" data-image-id="IMG-10"><span class="media-number">IMG-10</span><div><b>Effects showcase grid</b><small>Ten labeled renders—one per effect system</small></div></figure></div>
+        <div class="media-grid three"><figure class="media-slot" data-image-id="IMG-11"><span class="media-number">IMG-11</span><div><b>Galaxy close-up</b><small>Core, stars, and Edge Transition visible</small></div></figure><figure class="media-slot" data-image-id="IMG-12"><span class="media-number">IMG-12</span><div><b>PlayStation close-up</b><small>Geometry snap, texture wobble, dither, and scanlines</small></div></figure><figure class="media-slot" data-image-id="IMG-13"><span class="media-number">IMG-13</span><div><b>Hologram close-up</b><small>Glyphs, data bands, glitch, and edge glow</small></div></figure></div>
+      </section>
+
+      <section id="text-tools" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Category 04</span><h2>Text Tools</h2><p>Text Tools render text through the material itself. They use compatible font-atlas textures and do not require a separate TextMesh object for the rendered lettering.</p></div>
+        <div class="doc-accordion">
+          <details open><summary><span>Name Tag</span><small>Compact one-by-one tag</small></summary><div class="details-body"><p>Enter up to 32 main characters, choose a Text Tools font atlas, and set left, center, or right alignment. Text Size, Character Spacing, Horizontal Padding, Corner Radius, Border Width, and horizontal/vertical position control the layout. Fit behavior keeps long names inside the tag region.</p><p><b>Sub-Text</b> adds a separately styled second line up to 64 characters. <b>Icon</b> adds a left- or right-side texture with tint, background, border, scale, and offsets.</p></div></details>
+          <details><summary><span>Large Tag (Generator)</span><small>Up to 2,000 characters</small></summary><div class="details-body"><p>Large Tag generates a multiline text texture from the entered paragraph and stores the source text with the material. It supports horizontal and vertical alignment, text size, line and character spacing, width, height, two-axis padding, position, background, rounded corners, and border.</p><p>Use it for signs, credits, readable panels, or blocks of world text. Regenerate after text or layout changes so the texture matches the current settings.</p></div></details>
+          <details><summary><span>Typing Text Variations</span><small>Five animated text states</small></summary><div class="details-body"><p>Store up to five text variations with up to 128 characters each. Control typing speed, erase speed, completed-text hold time, variation switching, cursor display, paragraph alignment, vertical alignment, line spacing, padding, position, background, corners, and border.</p><p>The text is packed into material data for shader rendering. The inspector sanitizes unsupported characters and provides a common symbol row for arrows, hearts, diamonds, stars, and music notes.</p></div></details>
+        </div>
+        <div class="callout"><b>Font atlas contract</b><p>Compatible atlases use 64 × 64 pixel cells in a 16-column × 8-row layout. Keep that grid consistent when adding custom Text Tools fonts.</p></div>
+        <div class="media-grid three"><figure class="media-slot" data-image-id="IMG-14"><span class="media-number">IMG-14</span><div><b>Text Tools UI</b><small>Name Tag, Large Tag, and Typing Text Variations headers</small></div></figure><figure class="media-slot" data-image-id="IMG-15"><span class="media-number">IMG-15</span><div><b>Name Tag examples</b><small>Left, center, right, sub-text, and icon variants</small></div></figure><figure class="media-slot" data-image-id="IMG-16"><span class="media-number">IMG-16</span><div><b>Large & typing text</b><small>Multiline tag plus several frames of typing animation</small></div></figure></div>
+      </section>
+
+      <section id="dissolves" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Category 05</span><h2>Dissolves and Transformations</h2><p>A shared <b>Dissolve Progress</b> value is the animation driver. The other sections define boundary shape, breakup, transition appearance, mesh motion, decals, and tile order.</p></div>
+        <div class="preset-panel"><h3>17 built-in starting points</h3><div class="tag-list"><span>Burn Away</span><span>Electric Dematerialize</span><span>Hologram Reconstruction</span><span>Freeze Over</span><span>Crystal Form</span><span>Ash Disintegration</span><span>Digital Voxelize</span><span>Triangle Shatter</span><span>Pixel Materialize</span><span>Plasma Phase</span><span>Toxic Melt</span><span>Molten Forge</span><span>Celestial Ascension</span><span>Rainbow Warp</span><span>Void Collapse</span><span>Circuit Upload</span><span>Ghostly Fade</span></div><p>Applying a preset configures a starting combination of dissolve shape, breakup, edge, and motion. It never changes Dissolve Progress, so an existing animation remains intact.</p></div>
+        <div class="doc-accordion">
+          <details open><summary><span>Dissolve Controller</span><small>Shape, space, mask, and breakup</small></summary><div class="details-body"><p>Choose UV, Directional, World-Height, Object-Space, Radial, Spherical, Box-Shaped, or Texture-Mask dissolve. Depending on the shape, set coordinate space, direction, start/end or range, center, radius, box extents, or a panning UV mask. Invert Direction reverses the result.</p><p>Layer one of twelve patterns: Smooth, Noise, Voronoi, Pixel, Scanline, Geometric Triangle, Cellular Dust, Hexagonal Cell, Crosshatch, Concentric Ring, Shattered Grid, or Circuit Pulse. Scale, strength, animation speed, and seed refine the breakup.</p></div></details>
+          <details><summary><span>Transition Edge</span><small>15 edge styles</small></summary><div class="details-body"><p>Choose Custom, Burn, Electric, Hologram Reconstruction, Ice, Crystallization, Ash, Digital Voxel, Plasma, Toxic Energy, Molten Metal, Celestial, Rainbow Energy, Void, or Prismatic. Built-In Style Influence blends the preset look with manual values.</p><p>Manual controls include edge width, two colors, optional two-color edge, HDR emission, interior transition tint, flicker, and distortion.</p></div></details>
+          <details><summary><span>Transformation Motion</span><small>Boundary-aware vertex deformation</small></summary><div class="details-body"><p>Move vertices around the boundary with displacement amount, boundary spread, noise, and direction mode. Outline Response can follow, fade, contract, display only at the dissolve edge, or ignore the dissolve; Outline Response Strength controls the chosen behavior.</p></div></details>
+          <details><summary><span>Independent Decal Dissolves</span><small>Separate progress per decal</small></summary><div class="details-body"><p>Supported decal layers can use their own mask, inversion, and progress. This lets printed details, labels, or layered graphics vanish on a different schedule from the main surface.</p></div></details>
+          <details><summary><span>UV Tile Discard</span><small>Grid-based materialization</small></summary><div class="details-body"><p>Split UVs into 1–64 columns and rows, then remove tiles Randomly, Horizontally, Vertically, Center Out, or Outside In. Randomness, seed, and influence shape the sequence and how strongly it combines with the main dissolve.</p></div></details>
+        </div>
+        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-17"><span class="media-number">IMG-17</span><div><b>Transformation UI</b><small>Preset, Controller, Edge, Motion, Decals, and UV Tiles</small></div></figure><figure class="media-slot" data-image-id="IMG-18"><span class="media-number">IMG-18</span><div><b>Transformation sequence</b><small>Five progress frames from visible to dissolved</small></div></figure></div>
+      </section>
+
+      <section id="creator-tools" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Avatar and material workflows</span><h2>Creator Tools</h2><p>Open <code>MSage → Shader Master by MSage → 3. Creator Tools</code> for focused material conversion, VRC toggle generation, and preset creation workflows.</p></div>
+        <div class="card-grid three">
+          <article class="info-card"><i>◆</i><h3>Material Tools</h3><p>Target multiple materials with indexed slots or drag-and-drop, auto-detect nearby textures, create non-destructive Shader Master copies, and generate Quest-compatible material copies in a required output folder.</p></article>
+          <article class="info-card"><i>↯</i><h3>VRC Toggle Tools</h3><p>Select an avatar, renderer, material slot, and marked shader property. Create deterministic On, Off, Slider, mesh-active, merged, Radial Puppet, On/Off, or Dissolve animation workflows.</p></article>
+          <article class="info-card"><i>✓</i><h3>Settings & Presets</h3><p>Save a selected Shader Master material as a reusable preset. Saved presets remain available from the material inspector's Preset dropdown.</p></article>
+        </div>
+        <div class="callout good"><b>Generated avatar setup</b><p>VRC Toggle Tools can create or augment the avatar FX controller, add saved/network-synced expression parameters, choose Default On or Default Off, generate states with Write Defaults On, create a missing root Expressions Menu, and place the control on a selected root menu or submenu.</p></div>
+        <div class="callout warn"><b>VRChat SDK requirement</b><p>VRC Toggle Tools appears only when the VRChat Avatars SDK is installed. Shader Master and the non-VRC material/preset tools continue to compile and work without it.</p></div>
+        <div class="media-grid two">
+          <figure class="media-slot has-image"><a href="assets/screenshots/creator-tools-material-tools.jpg" target="_blank" rel="noopener"><img src="assets/screenshots/creator-tools-material-tools.jpg" alt="Material Tools category with target material list, drag zone, conversion controls, and output folder"></a><div><b>Material Tools</b><small>Multi-material targets, drag-and-drop, direct conversion actions, and required output-folder gating.</small></div></figure>
+          <figure class="media-slot has-image"><a href="assets/screenshots/creator-tools-vrc-toggle-tools.jpg" target="_blank" rel="noopener"><img src="assets/screenshots/creator-tools-vrc-toggle-tools.jpg" alt="VRC Toggle Tools with toggle values, default toggle state, generated toggle type, and avatar menu option"></a><div><b>VRC Toggle Tools</b><small>Toggle values, Default Toggle State, generated control type, and optional Expressions Menu creation.</small></div></figure>
+        </div>
+        <figure class="media-slot media-slot--wide has-image"><a href="assets/screenshots/shader-master-check-for-updates.jpg" target="_blank" rel="noopener"><img src="assets/screenshots/shader-master-check-for-updates.jpg" alt="Check for Updates button and MSage copyright footer at the bottom of the Shader Master inspector"></a><div><b>Updates from the inspector</b><small>The Check for Updates action sits directly above the MSage footer and release branding.</small></div></figure>
+      </section>
+
+      <section id="render-settings" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Category 06</span><h2>Render Settings</h2><p>These controls affect transparency, face visibility, depth, fog, VRChat camera contexts, and the shader’s detail budget.</p></div>
+        <div class="doc-accordion">
+          <details open><summary><span>Transparency Type</span><small>5 rendering modes</small></summary><div class="details-body"><table><thead><tr><th>Mode</th><th>Behavior</th><th>Typical use</th></tr></thead><tbody><tr><td>Opaque</td><td>No blended transparency</td><td>Fast, stable default for solid materials</td></tr><tr><td>Clipping</td><td>Hard cutout at Alpha Cutoff</td><td>Hair cards, leaves, holes, decals</td></tr><tr><td>Clipping Transparent</td><td>Cutout plus transparent behavior</td><td>Mixed hard edges and partial alpha</td></tr><tr><td>Fade</td><td>Conventional material fade</td><td>Fading the entire surface</td></tr><tr><td>Transparent</td><td>Alpha-blended transparent surface</td><td>Glass-like or energy effects</td></tr></tbody></table><p><b>Cull</b> decides which faces render. <b>ZTest</b> decides how depth comparisons pass. <b>ZWrite</b> decides whether the material writes into depth. <b>Ignore Fog</b> prevents scene fog from tinting the result.</p></div></details>
+          <details><summary><span>Mirror & VRCCam Visability</span><small>VRChat-aware alternate presentation</small></summary><div class="details-body"><p><b>Alt Textures (Mirror)</b> and <b>Alt Textures (VRCCam)</b> can substitute Base Color and Emission Color textures, tints, and influence only in the matching render context. Effect checkboxes labeled <b>Appear in Mirror</b> and <b>Appear in VRCCam</b> control whether supported effects contribute there.</p><p>Test normal view, a VRChat mirror, and the handheld/photo camera separately. A setting looking correct in Unity’s Scene view is not proof that all VRChat contexts behave identically.</p></div></details>
+          <details><summary><span>Shader Overall Quality</span><small>5 global tiers</small></summary><div class="details-body"><p>Potato, Crowd, Balanced, Showcase, and Cinematic provide progressively higher detail budgets. Use Balanced as a practical starting point, Crowd for many simultaneous avatars, and Showcase/Cinematic only when the visible difference justifies the cost.</p></div></details>
+          <details><summary><span>Adaptive Detail Budget</span><small>Distance-aware cost control</small></summary><div class="details-body"><p>Full Detail Distance sets the near range. Reduced Detail Distance sets where the long-range reduction is fully active. Minimum Detail controls how much procedural detail remains at maximum reduction.</p></div></details>
+          <details><summary><span>Audio Link</span><small>Material-wide band calibration</small></summary><div class="details-body"><p>Enable AudioLink and tune Base, Low Mid, High Mid, and Treble gains. These values calibrate how AudioLink-driven features react without forcing you to retune every individual feature.</p></div></details>
+        </div>
+        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-19"><span class="media-number">IMG-19</span><div><b>Render Settings UI</b><small>Transparency through Audio Link expanded</small></div></figure><figure class="media-slot" data-image-id="IMG-20"><span class="media-number">IMG-20</span><div><b>Mirror & VRCCam comparison</b><small>Normal view, mirror, and VRCCam with clearly different alternate textures</small></div></figure></div>
+      </section>
+
+      <section id="optimization" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Shipping guidance</span><h2>Optimization and platform boundaries</h2></div>
+        <div class="card-grid two">
+          <article class="info-card"><i>PC</i><h3>PC / Windows avatars</h3><p>Use the shader’s full feature set selectively. Transparency, multiple passes, procedural effects, animated layers, and additional material slots can add cost. Test in the target world and expected avatar crowd.</p></article>
+          <article class="info-card"><i>Q</i><h3>VRChat Android / Quest</h3><p>Arbitrary custom avatar shaders are not supported on the Android/Quest avatar pipeline. Build a separate mobile-compatible fallback material using supported VRChat mobile shaders rather than assuming MSage/Shader Master will run there.</p></article>
+          <article class="info-card"><i>◎</i><h3>Keep the material intentional</h3><p>Disable systems you do not use, prefer Opaque where possible, reduce transparent layers, keep texture sizes appropriate, and use quality/adaptive-detail controls before adding more material slots.</p></article>
+          <article class="info-card"><i>△</i><h3>Validate the real context</h3><p>Shader compilation proves structure, not appearance. Check the avatar or object in motion, multiple light directions, several camera distances, VRChat mirrors, VRCCam, and every transparency mode you plan to ship.</p></article>
+        </div>
+        <figure class="media-slot media-slot--wide" data-image-id="IMG-21"><span class="media-number">IMG-21</span><div><b>Quality-tier comparison</b><small>Same material at Potato, Crowd, Balanced, Showcase, and Cinematic</small></div></figure>
+      </section>
+
+      <section id="troubleshooting" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Problem solving</span><h2>Troubleshooting</h2></div>
+        <div class="faq-list">
+          <details><summary>The material is pink or the inspector is missing.</summary><div><p>Confirm the project is using a supported Unity version, the complete Shader Master by MSage folder imported successfully, and the material’s shader is <code>MSage/Shader Master</code>. Check Unity Console compilation errors before changing material values.</p></div></details>
+          <details><summary>Transparency or an outline looks wrong.</summary><div><p>Test Opaque, Clipping, Clipping Transparent, Fade, and Transparent separately. Then check Alpha Map, Base Color alpha, Use Transparency, Alpha Cutoff, Cull, ZTest, ZWrite, the selected Outline Type, and its outline-specific depth/culling controls.</p></div></details>
+          <details><summary>A texture moves, stretches, or samples the wrong area.</summary><div><p>Check Tiling and Offset, Panning, and UV Map inside that texture’s subsection. Panning should be zero for a stationary texture. Verify the mesh actually contains the UV channel selected.</p></div></details>
+          <details><summary>An effect is visible normally but missing in a mirror or VRCCam.</summary><div><p>Open Mirror & VRCCam Visability and verify the effect’s Appear in Mirror and Appear in VRCCam values. Also test Alt Textures and influence values. Unity Scene view is not a replacement for testing those actual VRChat passes.</p></div></details>
+          <details><summary>Audio-reactive controls do not move.</summary><div><p>Enable the main Audio Link section, confirm AudioLink exists and is active in the environment, choose the correct frequency band inside the feature, and increase both the relevant per-feature range and global band gain.</p></div></details>
+          <details><summary>Text is clipped, missing, or uses the wrong characters.</summary><div><p>Use a compatible Text Tools font atlas, stay within the section’s character limit, verify width/height/padding and alignment, and regenerate Large Tag content after edits. Unsupported characters may be replaced with a question mark.</p></div></details>
+          <details><summary>A copied section will not paste.</summary><div><p>Copy from the same category or section scope on another material using the same shader. Paste intentionally stays disabled for mismatched scopes or incompatible shaders.</p></div></details>
+          <details><summary>My tooltip edit does not appear.</summary><div><p>Save <code>Assets/Shader Master by MSage/Editor/ShaderMasterTooltips.txt</code>, return to Unity, and allow the asset import to finish. Keep the <code>key = text</code> format and avoid removing the key before the equals sign.</p></div></details>
+        </div>
+      </section>
+
+      <section id="image-plan" class="wiki-section searchable">
+        <div class="section-heading"><span class="section-kicker">Next collaboration step</span><h2>Planned image set</h2><p>The numbered placeholders above are deliberate. Supply the images below and they can be cropped, captioned, and fitted into the final page without changing the written structure.</p></div>
+        <div class="image-request-list">
+          <article><b>IMG-01</b><span>Hero showcase render</span><small>16:10 landscape, clean background, strongest overall shader look.</small></article>
+          <article><b>IMG-02</b><span>Shader selection</span><small>Unity Inspector showing MSage/Shader Master in the Shader menu.</small></article>
+          <article><b>IMG-03</b><span>Clean first material</span><small>Main category with base, normal, and alpha setup visible.</small></article>
+          <article><b>IMG-04</b><span>Inspector anatomy</span><small>Tall screenshot with every header action and search visible.</small></article>
+          <article><b>IMG-05</b><span>Main category UI</span><small>Main Textures, Emissions, MatCaps, adjustments.</small></article>
+          <article><b>IMG-06</b><span>Emission and MatCap comparison</span><small>One model, clear before/after or labeled split.</small></article>
+          <article><b>IMG-07</b><span>Shading UI</span><small>Shadows and Rim Lighting expanded.</small></article>
+          <article><b>IMG-08</b><span>Surface comparison</span><small>Metal, jewelry, weathering, skin, cloth, wetness.</small></article>
+          <article><b>IMG-09</b><span>Special Effects UI</span><small>All ten effect headers visible.</small></article>
+          <article><b>IMG-10</b><span>Effects showcase grid</span><small>Ten labeled examples with the same model and camera.</small></article>
+          <article><b>IMG-11</b><span>Galaxy close-up</span><small>Nebula, stars, and edge transition clearly visible.</small></article>
+          <article><b>IMG-12</b><span>PlayStation close-up</span><small>Snap, wobble, dither, and scanline artifacts.</small></article>
+          <article><b>IMG-13</b><span>Hologram close-up</span><small>Glyphs, scanlines, data bands, glitch, edge glow.</small></article>
+          <article><b>IMG-14</b><span>Text Tools UI</span><small>Three Text Tools sections visible.</small></article>
+          <article><b>IMG-15</b><span>Name Tag examples</span><small>Alignment, sub-text, and icon variations.</small></article>
+          <article><b>IMG-16</b><span>Large and typing text</span><small>Multiline large tag plus typing-animation frame strip.</small></article>
+          <article><b>IMG-17</b><span>Transformation UI</span><small>Preset and all transformation section headers.</small></article>
+          <article><b>IMG-18</b><span>Dissolve sequence</span><small>Five equally spaced progress frames.</small></article>
+          <article><b>IMG-19</b><span>Render Settings UI</span><small>Transparency, VRChat, quality, detail, AudioLink.</small></article>
+          <article><b>IMG-20</b><span>VRChat camera comparison</span><small>Normal, mirror, and VRCCam side by side.</small></article>
+          <article><b>IMG-21</b><span>Quality-tier comparison</span><small>Five matching crops from Potato through Cinematic.</small></article>
+        </div>
+      </section>
+
+      <footer class="wiki-footer">
+        <img src="assets/msage-logo.png" alt="">
+        <div><b>Shader Master by MSage Wiki</b><span>Built for creators who want control without losing clarity.</span></div>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </main>
+  </div>
+  <script src="wiki.js"></script>
+</body>
+</html>
