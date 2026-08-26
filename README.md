@@ -14,6 +14,8 @@
   <a href="https://github.com/MSage3D/shader-master-by-msage/releases/latest"><strong>Latest Release</strong></a>
   ·
   <a href="https://www.msage.co/"><strong>MSage Website</strong></a>
+  ·
+  <a href="https://msage.co/discord"><strong>Join the Discord &amp; Become a Supporter</strong></a>
 </p>
 
 > Current release: **v0.4.31** · Unity shader path: `MSage/Shader Master`
@@ -77,7 +79,7 @@ For VRChat avatar projects, use the Unity version and VRChat Creator Companion s
 
 ## Updating
 
-The bottom of the Shader Master material inspector includes **Check for Updates**. It compares the installed `Version.txt` against this repository's `latest.json`, then links to the matching release when a newer version is available.
+The bottom of the Shader Master material inspector includes **Check for Updates** and **Support MSage on Discord**. The updater compares the installed `Version.txt` against this repository's `latest.json`, then links to the matching release when a newer version is available. The support button opens the MSage Discord, where creators can join the community and become supporters of continued Shader Master development.
 
 Every release publishes a SHA-256 hash. You can verify a downloaded package in PowerShell:
 
@@ -104,6 +106,8 @@ It includes quick-start guidance, inspector workflow, a feature index, optimizat
 - Use source control or a project backup before changing production avatar controllers.
 
 ## Support and feedback
+
+Join the [MSage Discord](https://msage.co/discord) for the community and supporter options that help fund continued Shader Master development.
 
 Before reporting a problem, include:
 

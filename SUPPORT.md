@@ -1,5 +1,7 @@
 # Shader Master Support
 
+Join the [MSage Discord](https://msage.co/discord) to connect with the community and become a supporter of continued Shader Master development.
+
 ## Before requesting help
 
 1. Confirm the issue still occurs on the latest published version.
