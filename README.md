@@ -24,11 +24,6 @@ Shader Master brings everyday surface controls, stylized lighting, modular speci
 
 The custom **MSage Unity Theme** keeps large material setups navigable through searchable categories, sections, and subsections. Every major scope has purpose-built controls, tooltips, copy/paste support, reset behavior, and preset workflows.
 
-<p align="center">
-  <a href="docs/assets/screenshots/shader-master-unity-overview.jpg"><img src="docs/assets/screenshots/shader-master-unity-overview.jpg" alt="Shader Master inspector and Creator Tools in Unity" width="100%"></a>
-  <br><sub>Shader Master and Creator Tools running together in the Unity development project.</sub>
-</p>
-
 ## Feature highlights
 
 | Area | Included systems |
@@ -69,12 +64,6 @@ Shader Master includes a separate **Creator Tools** window under:
 - Optionally create the avatar's root Expressions Menu and place the control on the selected root menu or submenu.
 
 VRChat-specific tools compile only when the VRChat Avatars SDK is installed. Material tools and the shader remain available without it.
-
-<p align="center">
-  <a href="docs/assets/screenshots/creator-tools-material-tools.jpg"><img src="docs/assets/screenshots/creator-tools-material-tools.jpg" alt="Creator Tools Material Tools category" width="49%"></a>
-  <a href="docs/assets/screenshots/creator-tools-vrc-toggle-tools.jpg"><img src="docs/assets/screenshots/creator-tools-vrc-toggle-tools.jpg" alt="Creator Tools VRC Toggle Tools category" width="49%"></a>
-  <br><sub>Material conversion workflows on the left; avatar toggle and menu generation on the right.</sub>
-</p>
 
 ## Installation
 

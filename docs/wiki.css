@@ -117,6 +117,7 @@ kbd { min-width: 25px; padding: 1px 7px; border: 1px solid rgba(255,255,255,.14)
 
 .article { grid-column: 2; width: min(1220px, calc(100% - 48px)); margin: 0 auto; padding: 110px 0 70px; }
 .hero { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; gap: 36px; align-items: center; min-height: 570px; padding: 54px; overflow: hidden; border: 1px solid rgba(216,98,204,.28); border-radius: 26px; background: linear-gradient(135deg, rgba(95,54,145,.25), rgba(19,12,15,.96) 48%, rgba(251,119,84,.08)); box-shadow: var(--glow); }
+.hero--text { grid-template-columns: 1fr; }
 .hero::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--purple), var(--magenta), var(--coral), var(--orange)); }
 .hero::after { content: ""; position: absolute; width: 380px; height: 380px; right: -170px; top: -180px; border: 70px solid rgba(216,98,204,.04); border-radius: 50%; }
 .hero-copy { position: relative; z-index: 1; }
