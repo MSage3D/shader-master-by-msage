@@ -18,7 +18,7 @@
   <a href="https://msage.co/discord"><strong>Join the Discord &amp; Become a Supporter</strong></a>
 </p>
 
-> Current release: **v0.4.31** · Unity shader path: `MSage/Shader Master`
+> Current release: **v0.4.32** · Unity shader path: `MSage/Shader Master`
 
 ## What Shader Master is
 
@@ -36,7 +36,7 @@ The custom **MSage Unity Theme** keeps large material setups navigable through s
 | Special Effects | Galaxy, Glitter, Force Field, PlayStation-inspired rendering, Hologram, Eye FX, Dream FX, Temporal Split FX, and other modular systems |
 | Text Tools | Shader-native Name Tags, Large Tags, typing text variations, alignment, fitting, sub-text, icons, font atlases, and animation controls |
 | Dissolves & Transformations | Seventeen built-in transformation presets, dissolve progress, transition edges, motion, independent decal dissolves, and UV tile discard |
-| Render & VRChat | Transparency modes, mirror and VRCCam variants, quality tiers, adaptive detail, fog/culling/depth controls, and VRChat-focused optimization options |
+| Render & VRChat | Transparency modes, mirror and VRCCam variants, quality tiers, adaptive detail, optimized shader locking, fog/culling/depth controls, and VRChat-focused optimization options |
 | AudioLink | Audio-reactive shader effects plus editor-only Base, Low Mid, High Mid, and Treble preview sliders that reset before builds/uploads |
 
 ## Creator Tools
@@ -66,6 +66,12 @@ Shader Master includes a separate **Creator Tools** window under:
 - Optionally create the avatar's root Expressions Menu and place the control on the selected root menu or submenu.
 
 VRChat-specific tools compile only when the VRChat Avatars SDK is installed. Material tools and the shader remain available without it.
+
+## Optimized Shader Locking
+
+Use **Lock Optimized Shader** in the material inspector to create a cached shader tailored to the material's enabled features. Unused optional passes and fixed feature variants are removed while animated properties and animation-swapped materials remain available. Use **Unlock Optimized Shader** before changing the material's feature layout.
+
+**Automatically lock Shader Master materials on VRChat avatar upload** is enabled by default. Pre-locking materials before upload lets Unity finish the one-time optimized shader compilation before the VRChat build begins.
 
 ## Installation
 
