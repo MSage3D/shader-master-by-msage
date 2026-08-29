@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.35
+
+- Made optimized shader locking automatic during VRChat avatar preprocessing.
+- Added **4. Lock all optimized Shader Master Materials** under the MSage menu for precompiling every Shader Master material in the project.
+- Moved the material **Lock Optimized Shader** and **Unlock Optimized Shader** controls below the update and Discord support links.
+- Made Toggle Target labels green and preserved their properties from optimized-shader locking so animated toggles remain functional in-game.
+- Added the VRC Toggle Tools guidance note explaining how to mark features as Toggle Targets.
+- Fixed Hyper Cell and Hyper Realistic shadow behavior in mirrors and the VRChat camera by falling back to Cell Shading and Realistic shading respectively.
+
 ## 0.4.32
 
 - Added **Lock Optimized Shader** and **Unlock Optimized Shader** controls to the material inspector.

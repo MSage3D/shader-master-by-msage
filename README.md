@@ -18,7 +18,7 @@
   <a href="https://msage.co/discord"><strong>Join the Discord &amp; Become a Supporter</strong></a>
 </p>
 
-> Current release: **v0.4.32** · Unity shader path: `MSage/Shader Master`
+> Current release: **v0.4.35** · Unity shader path: `MSage/Shader Master`
 
 ## What Shader Master is
 
@@ -69,9 +69,11 @@ VRChat-specific tools compile only when the VRChat Avatars SDK is installed. Mat
 
 ## Optimized Shader Locking
 
-Use **Lock Optimized Shader** in the material inspector to create a cached shader tailored to the material's enabled features. Unused optional passes and fixed feature variants are removed while animated properties and animation-swapped materials remain available. Use **Unlock Optimized Shader** before changing the material's feature layout.
+Use **Lock Optimized Shader** at the bottom of the material inspector to create a cached shader tailored to the material's enabled features. Unused optional passes and fixed feature variants are removed while animated properties, Toggle Targets, and animation-swapped materials remain available. Use **Unlock Optimized Shader** before changing the material's feature layout.
 
-**Automatically lock Shader Master materials on VRChat avatar upload** is enabled by default. Pre-locking materials before upload lets Unity finish the one-time optimized shader compilation before the VRChat build begins.
+Shader Master materials are automatically locked during VRChat avatar preprocessing. To compile them before starting an upload, use **MSage → Shader Master by MSage → 4. Lock all optimized Shader Master Materials**.
+
+Hyper Cell materials use the Cell Shading fallback in mirrors and the VRChat camera, while Hyper Realistic materials use the Realistic fallback. Their selected Hyper mode remains active in the normal camera.
 
 ## Installation
 
