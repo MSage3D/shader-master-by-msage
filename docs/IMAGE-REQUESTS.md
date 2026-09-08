@@ -5,7 +5,7 @@ Use PNG or WebP when text in the Unity UI must remain sharp. Use the same Unity 
 | ID | Requested image | Recommended composition |
 |---|---|---|
 | IMG-01 | Hero showcase render | 16:10 landscape; strongest overall character or prop render with clean negative space. |
-| IMG-02 | Shader selection | Unity Material Inspector with `MSage/Shader Master` highlighted in the Shader menu. |
+| IMG-02 | Shader selection | Unity Material Inspector with `MSage Shaders/Shader Master` highlighted in the Shader menu. |
 | IMG-03 | Clean first material | Main category with Base Color Texture, Normal Map, and Alpha setup visible. |
 | IMG-04 | Inspector anatomy | Tall screenshot showing category, section, subsection, enable toggle, Copy, Paste, Save, Reset, Preset, Creator Tools, and Search Settings. |
 | IMG-05 | Main category UI | Main Textures, Emissions, MatCaps, and General Adjustments expanded. |

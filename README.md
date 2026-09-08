@@ -18,7 +18,7 @@
   <a href="https://msage.co/discord"><strong>Join the Discord &amp; Become a Supporter</strong></a>
 </p>
 
-> Current release: **v0.4.35** · Unity shader path: `MSage/Shader Master`
+> Current release: **v0.4.36** · Unity shader path: `MSage Shaders/Shader Master`
 
 ## What Shader Master is
 
@@ -80,7 +80,7 @@ Hyper Cell materials use the Cell Shading fallback in mirrors and the VRChat cam
 1. Download the latest `.unitypackage` from [Releases](https://github.com/MSage3D/shader-master-by-msage/releases/latest).
 2. Open the target Unity project.
 3. Import the package and keep all Shader Master files selected.
-4. Create or select a Material and choose `MSage/Shader Master` from the Shader dropdown.
+4. Create or select a Material and choose `MSage Shaders/Shader Master` from the Shader dropdown.
 5. Read the [interactive wiki](https://msage3d.github.io/shader-master-by-msage/) for the full workflow and feature reference.
 
 For VRChat avatar projects, use the Unity version and VRChat Creator Companion setup currently supported by VRChat. Custom shaders are PC-only; Quest/Android avatars require a compatible mobile shader material.

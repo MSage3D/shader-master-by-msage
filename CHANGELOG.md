@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.36
+
+- Added dedicated **Outline Size Mask** textures for Simple, Rim, Doodle Noise, and Sticker outlines.
+- Separated outline opacity masking from outline thickness masking, so the existing Outline Mask now controls visibility without shrinking the outline.
+- Fixed Rim outline masking so transparent areas fade correctly while preserving the configured rim width and softness.
+- Applied Sticker outline size masking consistently to both the front and back outline layers.
+
 ## 0.4.35
 
 - Made optimized shader locking automatic during VRChat avatar preprocessing.

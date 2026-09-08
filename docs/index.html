@@ -96,13 +96,13 @@
         </div>
         <ol class="steps">
           <li><span>1</span><div><b>Create or select a Material</b><p>In Unity, create a new Material asset or select an existing material assigned to your mesh.</p></div></li>
-          <li><span>2</span><div><b>Choose MSage/Shader Master</b><p>Open the Shader dropdown on the material and select <code>MSage/Shader Master</code>. The custom MSage inspector will replace Unity’s default property list.</p></div></li>
+          <li><span>2</span><div><b>Choose MSage Shaders/Shader Master</b><p>Open the Shader dropdown on the material and select <code>MSage Shaders/Shader Master</code>. The custom MSage inspector will replace Unity’s default property list.</p></div></li>
           <li><span>3</span><div><b>Build the base surface</b><p>Set Base Color, Base Color Texture, Normal Map, and optional Alpha Map. Confirm the correct UV channel and set panning to zero for stationary textures.</p></div></li>
           <li><span>4</span><div><b>Choose shading and rendering</b><p>Select a shadow style and transparency mode before tuning effects. Opaque is the simplest and most reliable starting point.</p></div></li>
           <li><span>5</span><div><b>Add one feature at a time</b><p>Enable a section, tune it, and test in the lighting and camera contexts your audience will actually use.</p></div></li>
         </ol>
         <div class="media-grid two">
-          <figure class="media-slot" data-image-id="IMG-02"><span class="media-number">IMG-02</span><div><b>Shader selection</b><small>Material Inspector with MSage/Shader Master highlighted</small></div></figure>
+          <figure class="media-slot" data-image-id="IMG-02"><span class="media-number">IMG-02</span><div><b>Shader selection</b><small>Material Inspector with MSage Shaders/Shader Master highlighted</small></div></figure>
           <figure class="media-slot" data-image-id="IMG-03"><span class="media-number">IMG-03</span><div><b>Clean first material</b><small>Main category with a base texture and normal map assigned</small></div></figure>
         </div>
       </section>
@@ -213,7 +213,7 @@
         <div class="section-heading"><span class="section-kicker">Shipping guidance</span><h2>Optimization and platform boundaries</h2></div>
         <div class="card-grid two">
           <article class="info-card"><i>PC</i><h3>PC / Windows avatars</h3><p>Use the shader’s full feature set selectively. Transparency, multiple passes, procedural effects, animated layers, and additional material slots can add cost. Test in the target world and expected avatar crowd.</p></article>
-          <article class="info-card"><i>Q</i><h3>VRChat Android / Quest</h3><p>Arbitrary custom avatar shaders are not supported on the Android/Quest avatar pipeline. Build a separate mobile-compatible fallback material using supported VRChat mobile shaders rather than assuming MSage/Shader Master will run there.</p></article>
+          <article class="info-card"><i>Q</i><h3>VRChat Android / Quest</h3><p>Arbitrary custom avatar shaders are not supported on the Android/Quest avatar pipeline. Build a separate mobile-compatible fallback material using supported VRChat mobile shaders rather than assuming MSage Shaders/Shader Master will run there.</p></article>
           <article class="info-card"><i>◎</i><h3>Keep the material intentional</h3><p>Disable systems you do not use, prefer Opaque where possible, reduce transparent layers, keep texture sizes appropriate, and use quality/adaptive-detail controls before adding more material slots.</p></article>
           <article class="info-card"><i>△</i><h3>Validate the real context</h3><p>Shader compilation proves structure, not appearance. Check the avatar or object in motion, multiple light directions, several camera distances, VRChat mirrors, VRCCam, and every transparency mode you plan to ship.</p></article>
         </div>
@@ -224,7 +224,7 @@
       <section id="troubleshooting" class="wiki-section searchable">
         <div class="section-heading"><span class="section-kicker">Problem solving</span><h2>Troubleshooting</h2></div>
         <div class="faq-list">
-          <details><summary>The material is pink or the inspector is missing.</summary><div><p>Confirm the project is using a supported Unity version, the complete Shader Master by MSage folder imported successfully, and the material’s shader is <code>MSage/Shader Master</code>. Check Unity Console compilation errors before changing material values.</p></div></details>
+          <details><summary>The material is pink or the inspector is missing.</summary><div><p>Confirm the project is using a supported Unity version, the complete Shader Master by MSage folder imported successfully, and the material’s shader is <code>MSage Shaders/Shader Master</code>. Check Unity Console compilation errors before changing material values.</p></div></details>
           <details><summary>Transparency or an outline looks wrong.</summary><div><p>Test Opaque, Clipping, Clipping Transparent, Fade, and Transparent separately. Then check Alpha Map, Base Color alpha, Use Transparency, Alpha Cutoff, Cull, ZTest, ZWrite, the selected Outline Type, and its outline-specific depth/culling controls.</p></div></details>
           <details><summary>A texture moves, stretches, or samples the wrong area.</summary><div><p>Check Tiling and Offset, Panning, and UV Map inside that texture’s subsection. Panning should be zero for a stationary texture. Verify the mesh actually contains the UV channel selected.</p></div></details>
           <details><summary>An effect is visible normally but missing in a mirror or VRCCam.</summary><div><p>Open Mirror & VRCCam Visability and verify the effect’s Appear in Mirror and Appear in VRCCam values. Also test Alt Textures and influence values. Unity Scene view is not a replacement for testing those actual VRChat passes.</p></div></details>
@@ -239,7 +239,7 @@
         <div class="section-heading"><span class="section-kicker">Next collaboration step</span><h2>Planned image set</h2><p>The numbered placeholders above are deliberate. Supply the images below and they can be cropped, captioned, and fitted into the final page without changing the written structure.</p></div>
         <div class="image-request-list">
           <article><b>IMG-01</b><span>Hero showcase render</span><small>16:10 landscape, clean background, strongest overall shader look.</small></article>
-          <article><b>IMG-02</b><span>Shader selection</span><small>Unity Inspector showing MSage/Shader Master in the Shader menu.</small></article>
+          <article><b>IMG-02</b><span>Shader selection</span><small>Unity Inspector showing MSage Shaders/Shader Master in the Shader menu.</small></article>
           <article><b>IMG-03</b><span>Clean first material</span><small>Main category with base, normal, and alpha setup visible.</small></article>
           <article><b>IMG-04</b><span>Inspector anatomy</span><small>Tall screenshot with every header action and search visible.</small></article>
           <article><b>IMG-05</b><span>Main category UI</span><small>Main Textures, Emissions, MatCaps, adjustments.</small></article>
