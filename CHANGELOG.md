@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.37
+
+- Made newly generated optimized shaders self-contained by embedding their Outline and Dissolve code into one `.shader` file.
+- Removed the Shader Master custom-inspector dependency from generated locked shaders so they can stand alone in another Unity project.
+- Updated VRChat avatar preprocessing to accept already-locked standalone materials when the full Shader Master authoring package is absent.
+- Prevented missing authoring sources from escaping the upload callback as an exception.
+- Increased the optimizer version so older locked materials rebuild into the standalone format when re-locked.
+
 ## 0.4.36
 
 - Added dedicated **Outline Size Mask** textures for Simple, Rim, Doodle Noise, and Sticker outlines.

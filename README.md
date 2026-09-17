@@ -18,7 +18,7 @@
   <a href="https://msage.co/discord"><strong>Join the Discord &amp; Become a Supporter</strong></a>
 </p>
 
-> Current release: **v0.4.36** · Unity shader path: `MSage Shaders/Shader Master`
+> Current release: **v0.4.37** · Unity shader path: `MSage Shaders/Shader Master`
 
 ## What Shader Master is
 
@@ -70,6 +70,8 @@ VRChat-specific tools compile only when the VRChat Avatars SDK is installed. Mat
 ## Optimized Shader Locking
 
 Use **Lock Optimized Shader** at the bottom of the material inspector to create a cached shader tailored to the material's enabled features. Unused optional passes and fixed feature variants are removed while animated properties, Toggle Targets, and animation-swapped materials remain available. Use **Unlock Optimized Shader** before changing the material's feature layout.
+
+Each newly generated locked shader is self-contained. It embeds the required Outline and Dissolve code and can accompany an avatar into another Unity project without installing the full Shader Master authoring package. Materials locked by an older version must be unlocked and locked again to receive the standalone format.
 
 Shader Master materials are automatically locked during VRChat avatar preprocessing. To compile them before starting an upload, use **MSage → Shader Master by MSage → 4. Lock all optimized Shader Master Materials**.
 
