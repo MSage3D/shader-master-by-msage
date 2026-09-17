@@ -71,7 +71,9 @@ VRChat-specific tools compile only when the VRChat Avatars SDK is installed. Mat
 
 Use **Lock Optimized Shader** at the bottom of the material inspector to create a cached shader tailored to the material's enabled features. Unused optional passes and fixed feature variants are removed while animated properties, Toggle Targets, and animation-swapped materials remain available. Use **Unlock Optimized Shader** before changing the material's feature layout.
 
-Each newly generated locked shader is self-contained. It embeds the required Outline and Dissolve code and can accompany an avatar into another Unity project without installing the full Shader Master authoring package. Materials locked by an older version must be unlocked and locked again to receive the standalone format.
+Each newly generated locked shader lives in a portable companion set under `Generated/Locked Shaders`. Keep the generated `.shader`, any optimized `.cginc` files, and its adjacent `Editor` companion folder together when moving the material to another Unity project. Only include files actually required by that locked shader are generated; editor-only recovery sources remain `.txt` files and do not compile or upload while the material stays locked.
+
+When the full Shader Master package is installed, a locked material continues to use the complete Shader Master inspector. In a project containing only the portable locked-shader folder, it uses a lightweight Shader Master inspector with **Unlock Optimized Shader**. Unlocking reconstructs an editable Shader Master source from the adjacent recovery files, so the material can be recovered without the complete authoring package. Materials locked by an older version must be unlocked and locked again to receive this portable companion format.
 
 Shader Master materials are automatically locked during VRChat avatar preprocessing. To compile them before starting an upload, use **MSage → Shader Master by MSage → 4. Lock all optimized Shader Master Materials**.
 

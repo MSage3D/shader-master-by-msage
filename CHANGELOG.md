@@ -2,11 +2,14 @@
 
 ## 0.4.37
 
-- Made newly generated optimized shaders self-contained by embedding their Outline and Dissolve code into one `.shader` file.
-- Removed the Shader Master custom-inspector dependency from generated locked shaders so they can stand alone in another Unity project.
+- Reworked locked shaders into a portable companion set instead of embedding every support feature into one oversized `.shader` file.
+- Kept the complete Shader Master material UI when the authoring package is installed, with a lightweight portable inspector when only the locked shader folder is present.
+- Added a portable **Unlock Optimized Shader** workflow that restores editable Shader Master source from editor-only recovery files beside the locked shader.
+- Generated only the optimized include files required by each locked shader; disabled optional passes no longer bring along unused include files.
+- Kept recovery sources as `.txt` editor assets so the full feature source is not compiled or uploaded while the material remains locked.
 - Updated VRChat avatar preprocessing to accept already-locked standalone materials when the full Shader Master authoring package is absent.
 - Prevented missing authoring sources from escaping the upload callback as an exception.
-- Increased the optimizer version so older locked materials rebuild into the standalone format when re-locked.
+- Increased the optimizer version so older locked materials rebuild into the portable companion format when re-locked.
 
 ## 0.4.36
 
