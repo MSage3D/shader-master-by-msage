@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Complete feature guide and reference wiki for Shader Master by MSage for Unity and VRChat creators.">
-  <title>Shader Master by MSage Wiki</title>
+  <meta name="description" content="Twelve Unity shaders in one complete MSage Shaders package: Shader Master, Basic, Text Tools, and nine dedicated effects. Setup, shading guide, downloads and documentation.">
+  <title>MSage Shaders — Complete Unity Shader Collection &amp; Guide</title>
   <link rel="stylesheet" href="wiki.css">
 </head>
 <body>
@@ -12,9 +12,9 @@
   <div class="site-shell">
     <header class="topbar">
       <button class="nav-toggle" type="button" aria-label="Open wiki navigation" aria-expanded="false">☰</button>
-      <a class="brand" href="#top" aria-label="Shader Master by MSage Wiki home">
+      <a class="brand" href="#top" aria-label="MSage Shaders Wiki home">
         <img src="assets/msage-logo.png" alt="MSage 3D">
-        <span><b>Shader Master</b><small>by MSage · Creator Wiki</small></span>
+        <span><b>MSage Shaders</b><small>12 shaders · v0.5.0</small></span>
       </a>
       <label class="search-box">
         <span aria-hidden="true">⌕</span>
@@ -29,7 +29,7 @@
       <div class="sidebar-title">On this page</div>
       <nav id="wiki-nav">
         <a href="#overview">Overview</a>
-        <a href="#quick-start">Quick start</a>
+        <a href="#shader-catalogue">Shader catalogue</a><a href="#basic">Basic</a><a href="#quick-start">Installation</a>
         <a href="#inspector-workflow">Inspector workflow</a>
         <a href="#main">Main</a>
         <a href="#shading">Shading</a>
@@ -40,11 +40,11 @@
         <a href="#render-settings">Render Settings</a>
         <a href="#optimization">Optimization & platforms</a>
         <a href="#troubleshooting">Troubleshooting</a>
-        <a href="#image-plan">Image plan</a>
+        <a href="#release-notes">Release &amp; upgrades</a>
       </nav>
       <div class="sidebar-note">
         <span class="status-dot"></span>
-        <div><b>Documentation status</b><small>Built from the current Unity inspector source.</small></div>
+        <div><b>MSage Shaders v0.5.0</b><small>Built from the collection source. Download the complete package.</small></div>
       </div>
     </aside>
 
@@ -52,18 +52,13 @@
       <section id="top" class="hero hero--text searchable">
         <div class="hero-copy">
           <p class="eyebrow">Official creator reference</p>
-          <h1>Shader Master <small>by MSage</small></h1>
-          <p class="hero-lead">A layered Unity shader for stylized characters, props, name tags, transformations, reactive materials, and high-impact VRChat visuals—all organized through one creator-focused material inspector.</p>
+          <h1>MSage Shaders <small>One complete collection.</small></h1>
+          <p class="hero-lead">Choose the right shader for your material. Shader Master, Basic, Text Tools and nine dedicated effects share one complete Unity package, a consistent MSage inspector, and the resources needed to start creating.</p>
           <div class="hero-actions">
             <a class="button primary" href="#quick-start">Start here</a>
-            <a class="button secondary" href="#feature-index">Browse features</a>
+            <a class="button secondary" href="#shader-catalogue">Explore the shaders</a>
           </div>
-          <ul class="hero-facts" aria-label="Shader summary">
-            <li><b>6</b><span>Inspector categories</span></li>
-            <li><b>10</b><span>Special-effect systems</span></li>
-            <li><b>16</b><span>Rim-light modes</span></li>
-            <li><b>17</b><span>Transformation presets</span></li>
-          </ul>
+          <ul class="hero-facts" aria-label="Collection summary"><li><b>12</b><span>Selectable shaders</span></li><li><b>9</b><span>Dedicated effects</span></li><li><b>3</b><span>Text systems</span></li><li><b>1</b><span>Complete package</span></li></ul>
         </div>
       </section>
 
@@ -72,39 +67,23 @@
         <span>Try a feature name such as “Galaxy,” “Rim,” “Name Tag,” or “Transparency.”</span>
       </div>
 
-      <section id="overview" class="wiki-section searchable">
-        <div class="section-heading">
-          <span class="section-kicker">Introduction</span>
-          <h2>What the shader is built to do</h2>
-          <p>Shader Master by MSage combines everyday material controls with stylized shading, procedural effects, shader-native text, transformation animation, VRChat-aware visibility, and reusable creator workflows. Most systems are opt-in, so a material can remain simple or grow into a full showcase effect.</p>
-        </div>
-        <div id="feature-index" class="feature-index">
-          <a href="#main"><span>01</span><b>Main</b><small>Textures, emissions, MatCaps, color</small></a>
-          <a href="#shading"><span>02</span><b>Shading</b><small>Shadows, rims, surfaces, wear</small></a>
-          <a href="#special-effects"><span>03</span><b>Special Effects</b><small>Ten modular FX systems</small></a>
-          <a href="#text-tools"><span>04</span><b>Text Tools</b><small>Name, large, and typing text</small></a>
-          <a href="#dissolves"><span>05</span><b>Transformations</b><small>Dissolve, edge, motion, tiles</small></a>
-          <a href="#render-settings"><span>06</span><b>Render Settings</b><small>Transparency, VRChat, quality</small></a>
-        </div>
-        <div class="callout good"><b>Non-destructive by design</b><p>Most major features have their own enable toggle, local controls, reset button, and scoped copy/paste tools. Start with the minimum systems you need and add complexity deliberately.</p></div>
-      </section>
+      <section id="overview" class="wiki-section searchable"><div class="section-heading"><span class="section-kicker">The collection</span><h2>A shader for the material you are making.</h2><p><b>MSage Shaders</b> is the package. <b>Shader Master</b> remains the all-features shader. Use <b>Basic</b> for ordinary surface authoring, <b>Text Tools</b> for tags and signs, or a dedicated effect shader for one visual purpose.</p></div><div class="callout good"><b>Everything ships together</b><p>The complete unitypackage includes all 12 shaders, inspectors, includes, editor tools, fonts, font atlases, icons, example materials, the Name Tag prefab and documentation. Preserve both imported product folders.</p></div><div class="hero-actions"><a class="button primary" href="https://github.com/MSage3D/shader-master-by-msage/releases/latest">Download the complete package</a><a class="button secondary" href="#shader-catalogue">Choose a shader</a></div></section>
 
-      <section id="quick-start" class="wiki-section searchable">
+      <section id="shader-catalogue" class="wiki-section searchable"><div class="section-heading"><span class="section-kicker">12 selectable shaders</span><h2>Choose your shader.</h2><p>Every shader is selected from <code>MSage Shaders/…</code> on a material. These are separate shader assets with their own supported controls.</p></div><div class="catalogue-toolbar"><label for="shader-filter">Show shaders</label><select id="shader-filter"><option value="all">All 12 shaders</option><option value="core">Core materials</option><option value="effect">Dedicated effects</option><option value="text">Text and tags</option></select><span id="shader-count" aria-live="polite">12 shaders</span></div><div class="shader-catalogue"><article class="shader-card" data-shader-kind="core"><img loading="lazy" src="assets/previews/ShaderMaster.png" alt="Unity material render using Shader Master"><div class="shader-card-copy"><span class="shader-kind">Core shader</span><h3>Shader Master</h3><p class="shader-use">All features in one material</p><p>The complete layered shader: every surface, effect, text tool and transformation, plus optimized shader locking.</p><details><summary>Main textures &amp; shading</summary><p>Main, emissions, MatCaps; full shading, all FX, Text Tools and dissolves.</p><code>MSage Shaders/Shader Master</code></details></div></article><article class="shader-card" data-shader-kind="core"><img loading="lazy" src="assets/previews/Basic.png" alt="Unity material render using Basic"><div class="shader-card-copy"><span class="shader-kind">Core shader</span><h3>Basic</h3><p class="shader-use">Everyday material authoring</p><p>An independent copy of the Basic shader created for the Tara Stick Figure SDK, with its own inspector and no SDK dependency.</p><details><summary>Main textures &amp; shading</summary><p>Base, color-shift, normal and alpha maps; emissions, MatCaps, shadows, rim, metallic/roughness and outline.</p><code>MSage Shaders/Basic</code></details></div></article><article class="shader-card" data-shader-kind="text"><img loading="lazy" src="assets/previews/TextTools.png" alt="Unity material render using Text Tools"><div class="shader-card-copy"><span class="shader-kind">Text shader</span><h3>Text Tools</h3><p class="shader-use">Name tags, signs and animated text</p><p>A dedicated unlit shader for Name Tags, generated Large Tags and Typing Text Variations.</p><details><summary>Main textures &amp; shading</summary><p>Font atlases, alignment, fitting, sub-text, icons, borders, transparency and optional outline.</p><code>MSage Shaders/Text Tools</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/Galaxy.png" alt="Unity material render using Galaxy"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>Galaxy</h3><p class="shader-use">Animated deep-space surfaces</p><p>Nebula flow, star fields and non-additive edge transitions over a masked base surface.</p><details><summary>Main textures &amp; shading</summary><p>Base/normal/alpha, emission, shadows and rim.</p><code>MSage Shaders/Galaxy</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/Glitter.png" alt="Unity material render using Glitter"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>Glitter</h3><p class="shader-use">Sparkling fabric and coated surfaces</p><p>Animated surface sparkle with masks, angular visibility and controllable timing.</p><details><summary>Main textures &amp; shading</summary><p>Emission, MatCaps, shadows, rim, metallic/roughness, clear coat and cloth.</p><code>MSage Shaders/Glitter</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/ForceField.png" alt="Unity material render using Force Field"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>Force Field</h3><p class="shader-use">Transparent energy shells</p><p>Digital Grid, Magic Rings, Hex Grid, Energy Waves and Plasma with their type-specific controls.</p><details><summary>Main textures &amp; shading</summary><p>Base/normal/alpha, emission and rim; Fade, two-sided, depth writes off by default.</p><code>MSage Shaders/Force Field</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/PlayStation.png" alt="Unity material render using PlayStation"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>PlayStation</h3><p class="shader-use">Retro geometry and texture rendering</p><p>Vertex snap, affine warping, quantized lighting, palette limits, dithering and display artifacts.</p><details><summary>Main textures &amp; shading</summary><p>Base/normal/alpha, emission, MatCaps and shadows.</p><code>MSage Shaders/PlayStation</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/Hologram.png" alt="Unity material render using Hologram"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>Hologram</h3><p class="shader-use">Glitching emissive projections</p><p>Glyphs, scanlines, data bands, dropout, mapping modes and edge glow.</p><details><summary>Main textures &amp; shading</summary><p>Base/normal/alpha, emission and rim; transparent and two-sided by default.</p><code>MSage Shaders/Hologram</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/Eye.png" alt="Unity material render using Eye"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>Eye</h3><p class="shader-use">Procedural iris and pupil authoring</p><p>Pupil shape and dilation, iris detail and depth, look tracking, catchlights and authored eye effects.</p><details><summary>Main textures &amp; shading</summary><p>Base/normal/alpha, emission, realistic shadows, roughness/specular and clear coat; metallic amount starts at zero.</p><code>MSage Shaders/Eye</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/Dream.png" alt="Unity material render using Dream"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>Dream</h3><p class="shader-use">Painterly and memory-image effects</p><p>Flowing color, image overlays, chromatic separation and outline echoes.</p><details><summary>Main textures &amp; shading</summary><p>Base/normal/alpha, emission, shadows and rim.</p><code>MSage Shaders/Dream</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/TemporalSplit.png" alt="Unity material render using Temporal Split"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>Temporal Split</h3><p class="shader-use">Staggered colored silhouettes</p><p>One to four shader-driven split layers with spacing, drift, breakup and chromatic separation.</p><details><summary>Main textures &amp; shading</summary><p>Base/normal/alpha, emission, MatCaps, shadows and rim; all four silhouette passes retained.</p><code>MSage Shaders/Temporal Split</code></details></div></article><article class="shader-card" data-shader-kind="effect"><img loading="lazy" src="assets/previews/LivingIllustration.png" alt="Unity material render using Living Illustration"><div class="shader-card-copy"><span class="shader-kind">Effect shader</span><h3>Living Illustration</h3><p class="shader-use">Ink, paper and crosshatching</p><p>Line boil, limited animation rate, paper texture, watercolor bleed and palette locking.</p><details><summary>Main textures &amp; shading</summary><p>Base/normal/alpha, emission, shadows and AO.</p><code>MSage Shaders/Living Illustration</code></details></div></article></div><p class="scope-note">Preview renders use Unity test geometry and lighting. Temporal styling is shader-driven; no previous camera frames are stored. Optional Outline FX supports the shaders rather than adding a thirteenth shader.</p></section>
+<section id="basic" class="wiki-section searchable"><div class="section-heading"><span class="section-kicker">Everyday materials</span><h2>Basic</h2><p>Select <code>MSage Shaders/Basic</code>. This is an independent copy of the Basic shader authored for the Tara Stick Figure SDK, with a distinct shader identity and inspector. The original SDK copy is unchanged and is not required.</p></div><div class="callout"><b>A practical starting material</b><p>Assign Base Color Texture, Color Shift Map, Normal Map and Alpha Map. Open each texture's UV, tiling/offset and panning controls. Add emission or MatCaps when needed, choose a shadow model, then tune rim lighting and metallic/roughness. Outline and render controls remain available.</p></div><p>Basic omits the procedural effect systems, Text Tools, transformations, jewelry, weathering and advanced surface effects. Move to Shader Master when the material needs those systems. Compatible property names preserve compatible texture and material values when changing shader.</p></section>
+<section id="quick-start" class="wiki-section searchable">
         <div class="section-heading">
           <span class="section-kicker">First material</span>
           <h2>Quick start</h2>
         </div>
         <ol class="steps">
           <li><span>1</span><div><b>Create or select a Material</b><p>In Unity, create a new Material asset or select an existing material assigned to your mesh.</p></div></li>
-          <li><span>2</span><div><b>Choose MSage Shaders/Shader Master</b><p>Open the Shader dropdown on the material and select <code>MSage Shaders/Shader Master</code>. The custom MSage inspector will replace Unity’s default property list.</p></div></li>
+          <li><span>2</span><div><b>Choose a shader in MSage Shaders</b><p>Open the material Shader dropdown and choose Basic, Shader Master, Text Tools, or the effect you need from <code>MSage Shaders</code>. The custom MSage inspector will replace Unity’s default property list.</p></div></li>
           <li><span>3</span><div><b>Build the base surface</b><p>Set Base Color, Base Color Texture, Normal Map, and optional Alpha Map. Confirm the correct UV channel and set panning to zero for stationary textures.</p></div></li>
           <li><span>4</span><div><b>Choose shading and rendering</b><p>Select a shadow style and transparency mode before tuning effects. Opaque is the simplest and most reliable starting point.</p></div></li>
           <li><span>5</span><div><b>Add one feature at a time</b><p>Enable a section, tune it, and test in the lighting and camera contexts your audience will actually use.</p></div></li>
         </ol>
-        <div class="media-grid two">
-          <figure class="media-slot" data-image-id="IMG-02"><span class="media-number">IMG-02</span><div><b>Shader selection</b><small>Material Inspector with MSage Shaders/Shader Master highlighted</small></div></figure>
-          <figure class="media-slot" data-image-id="IMG-03"><span class="media-number">IMG-03</span><div><b>Clean first material</b><small>Main category with a base texture and normal map assigned</small></div></figure>
-        </div>
+
       </section>
 
       <section id="inspector-workflow" class="wiki-section searchable">
@@ -120,7 +99,7 @@
         <div class="callout warn"><b>Save means two different things</b><p>The checkmark on a category or section changes the shader’s defaults for future materials. <b>Save new Preset</b> creates a reusable material asset. Use the preset workflow when you want named looks without changing global defaults.</p></div>
       </section>
 
-      <section id="main" class="wiki-section searchable">
+      <section id="main" class="wiki-section searchable"><div class="callout"><b>Shader Master feature reference</b><p>The following Main, Shading, effects and transformation reference describes the complete Shader Master shader. Basic and dedicated shaders expose the relevant subset listed in the catalogue.</p></div>
         <div class="section-heading"><span class="section-kicker">Category 01</span><h2>Main</h2><p>Build the core surface here: base color and maps, up to four emission layers, up to four MatCaps, and final color correction.</p></div>
         <div class="doc-accordion">
           <details open><summary><span>Main Textures</span><small>Base Color, Normal, and Alpha</small></summary><div class="details-body"><p><b>Base Color</b> multiplies the texture and supplies color when no texture is assigned. <b>Base Color Texture</b> includes tiling, offset, panning, UV0–UV3 selection, and optional alpha contribution. <b>Normal Map</b> adds tangent-space lighting detail. <b>Alpha Map</b> supplies visibility, an Alpha Cutoff for clipping modes, and an inversion toggle.</p><div class="mini-grid"><div><b>Use Transparency</b><span>Multiplies the Alpha Map by Base Color Texture alpha.</span></div><div><b>Alpha Cutoff</b><span>Discards pixels under the threshold in clipping modes.</span></div><div><b>Inverted Colors</b><span>Swaps the visible and transparent areas of the Alpha Map.</span></div></div></div></details>
@@ -128,7 +107,7 @@
           <details><summary><span>MatCaps</span><small>Four camera-relative material layers</small></summary><div class="details-body"><p>MatCaps project a pre-lit texture based on the surface normal relative to the camera. Each of the four possible layers has a texture, tint, strength, Add/Multiply/Overlay/Replace blend mode, rotation, scale, and independent mask.</p><p>Use MatCaps for stylized metal, glossy plastic, baked reflections, velvet, or illustrated lighting. They are view-dependent, so always rotate the camera during tuning.</p></div></details>
           <details><summary><span>General Adjustments</span><small>Final color finishing</small></summary><div class="details-body"><p>Saturation controls color intensity; Contrast expands or compresses tonal differences; Brightness scales the result; Gamma reshapes midtones; Exposure behaves like a photographic exposure adjustment; Hue Shift rotates colors around the color wheel.</p></div></details>
         </div>
-        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-05"><span class="media-number">IMG-05</span><div><b>Main category UI</b><small>Main Textures, Emissions, MatCaps, and General Adjustments expanded</small></div></figure><figure class="media-slot" data-image-id="IMG-06"><span class="media-number">IMG-06</span><div><b>Emission & MatCap example</b><small>Before/after or side-by-side surface render</small></div></figure></div>
+
       </section>
 
       <section id="shading" class="wiki-section searchable">
@@ -141,7 +120,7 @@
           <details><summary><span>Weathering</span><small>Age and storytelling detail</small></summary><div class="details-body"><p>History/Age, scale, and contrast drive the overall breakup. Surface Damage adds paint chips, tarnish, crease dirt, edge scratches, and faded fabric. Cracked Emission adds a glowing crack network. Moss or Frost Buildup can use a built-in look or a custom buildup color.</p></div></details>
           <details><summary><span>Advanced Surfaces</span><small>5 specialist material models</small></summary><div class="details-body"><p>A shared Surface FX Mask limits all advanced responses. <b>Clear Coat</b> adds a smooth transparent top layer. <b>Anisotropic Highlights</b> stretch and rotate highlights. <b>Skin</b> adds wrapped lighting, subsurface color, backscatter, softness, and oiliness. <b>Cloth</b> adds grazing-angle sheen and fiber highlights. <b>Wetness</b> darkens and smooths the surface while strengthening reflections and specular.</p></div></details>
         </div>
-        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-07"><span class="media-number">IMG-07</span><div><b>Shading category UI</b><small>Shadows and Rim Lighting expanded</small></div></figure><figure class="media-slot" data-image-id="IMG-08"><span class="media-number">IMG-08</span><div><b>Surface material comparison</b><small>Metal, jewelry, weathering, skin, cloth, and wetness examples</small></div></figure></div>
+
       </section>
 
       <section id="special-effects" class="wiki-section searchable">
@@ -158,11 +137,11 @@
           <article><span>09</span><h3>Temporal Split FX</h3><p>Motion-reactive colored silhouettes with one to four layers, screen offset, spacing, maximum separation, frame stagger, snapshot hold, drift, electrical breakup, scanline tearing, and chromatic split.</p></article>
           <article><span>10</span><h3>Living Illustration FX</h3><p>Ink and paper rendering with an optional paper texture, redrawn outlines, line boil, limited animation frame rate, crosshatched shadows, watercolor bleeding, misregistered color layers, and palette locking.</p></article>
         </div>
-        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-09"><span class="media-number">IMG-09</span><div><b>Special Effects UI</b><small>All effect headers visible in the inspector</small></div></figure><figure class="media-slot" data-image-id="IMG-10"><span class="media-number">IMG-10</span><div><b>Effects showcase grid</b><small>Ten labeled renders—one per effect system</small></div></figure></div>
-        <div class="media-grid three"><figure class="media-slot" data-image-id="IMG-11"><span class="media-number">IMG-11</span><div><b>Galaxy close-up</b><small>Core, stars, and Edge Transition visible</small></div></figure><figure class="media-slot" data-image-id="IMG-12"><span class="media-number">IMG-12</span><div><b>PlayStation close-up</b><small>Geometry snap, texture wobble, dither, and scanlines</small></div></figure><figure class="media-slot" data-image-id="IMG-13"><span class="media-number">IMG-13</span><div><b>Hologram close-up</b><small>Glyphs, data bands, glitch, and edge glow</small></div></figure></div>
+
+
       </section>
 
-      <section id="text-tools" class="wiki-section searchable">
+      <section id="text-tools" class="wiki-section searchable"><div class="callout good"><b>A dedicated Text Tools shader</b><p>Select <code>MSage Shaders/Text Tools</code> for these three systems without the unrelated surface effects. It starts with Name Tag enabled, two-sided Fade transparency and depth writes off. The same Text Tools remain available inside Shader Master.</p></div>
         <div class="section-heading"><span class="section-kicker">Category 04</span><h2>Text Tools</h2><p>Text Tools render text through the material itself. They use compatible font-atlas textures and do not require a separate TextMesh object for the rendered lettering.</p></div>
         <div class="doc-accordion">
           <details open><summary><span>Name Tag</span><small>Compact one-by-one tag</small></summary><div class="details-body"><p>Enter up to 32 main characters, choose a Text Tools font atlas, and set left, center, or right alignment. Text Size, Character Spacing, Horizontal Padding, Corner Radius, Border Width, and horizontal/vertical position control the layout. Fit behavior keeps long names inside the tag region.</p><p><b>Sub-Text</b> adds a separately styled second line up to 64 characters. <b>Icon</b> adds a left- or right-side texture with tint, background, border, scale, and offsets.</p></div></details>
@@ -170,7 +149,7 @@
           <details><summary><span>Typing Text Variations</span><small>Five animated text states</small></summary><div class="details-body"><p>Store up to five text variations with up to 128 characters each. Control typing speed, erase speed, completed-text hold time, variation switching, cursor display, paragraph alignment, vertical alignment, line spacing, padding, position, background, corners, and border.</p><p>The text is packed into material data for shader rendering. The inspector sanitizes unsupported characters and provides a common symbol row for arrows, hearts, diamonds, stars, and music notes.</p></div></details>
         </div>
         <div class="callout"><b>Font atlas contract</b><p>Compatible atlases use 64 × 64 pixel cells in a 16-column × 8-row layout. Keep that grid consistent when adding custom Text Tools fonts.</p></div>
-        <div class="media-grid three"><figure class="media-slot" data-image-id="IMG-14"><span class="media-number">IMG-14</span><div><b>Text Tools UI</b><small>Name Tag, Large Tag, and Typing Text Variations headers</small></div></figure><figure class="media-slot" data-image-id="IMG-15"><span class="media-number">IMG-15</span><div><b>Name Tag examples</b><small>Left, center, right, sub-text, and icon variants</small></div></figure><figure class="media-slot" data-image-id="IMG-16"><span class="media-number">IMG-16</span><div><b>Large & typing text</b><small>Multiline tag plus several frames of typing animation</small></div></figure></div>
+
       </section>
 
       <section id="dissolves" class="wiki-section searchable">
@@ -183,11 +162,11 @@
           <details><summary><span>Independent Decal Dissolves</span><small>Separate progress per decal</small></summary><div class="details-body"><p>Supported decal layers can use their own mask, inversion, and progress. This lets printed details, labels, or layered graphics vanish on a different schedule from the main surface.</p></div></details>
           <details><summary><span>UV Tile Discard</span><small>Grid-based materialization</small></summary><div class="details-body"><p>Split UVs into 1–64 columns and rows, then remove tiles Randomly, Horizontally, Vertically, Center Out, or Outside In. Randomness, seed, and influence shape the sequence and how strongly it combines with the main dissolve.</p></div></details>
         </div>
-        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-17"><span class="media-number">IMG-17</span><div><b>Transformation UI</b><small>Preset, Controller, Edge, Motion, Decals, and UV Tiles</small></div></figure><figure class="media-slot" data-image-id="IMG-18"><span class="media-number">IMG-18</span><div><b>Transformation sequence</b><small>Five progress frames from visible to dissolved</small></div></figure></div>
+
       </section>
 
       <section id="creator-tools" class="wiki-section searchable">
-        <div class="section-heading"><span class="section-kicker">Avatar and material workflows</span><h2>Creator Tools</h2><p>Open <code>MSage → Shader Master by MSage → 3. Creator Tools</code> for focused material conversion, VRC toggle generation, and preset creation workflows.</p></div>
+        <div class="section-heading"><span class="section-kicker">Avatar and material workflows</span><h2>Creator Tools</h2><p>Open <code>MSage → MSage Shaders → 3. Creator Tools</code> for focused material conversion, VRC toggle generation, and preset creation workflows.</p></div>
         <div class="card-grid three">
           <article class="info-card"><i>◆</i><h3>Material Tools</h3><p>Target multiple materials with indexed slots or drag-and-drop, auto-detect nearby textures, create non-destructive Shader Master copies, and generate Quest-compatible material copies in a required output folder.</p></article>
           <article class="info-card"><i>↯</i><h3>VRC Toggle Tools</h3><p>Select an avatar, renderer, material slot, and marked shader property. Create deterministic On, Off, Slider, mesh-active, merged, Radial Puppet, On/Off, or Dissolve animation workflows.</p></article>
@@ -206,7 +185,7 @@
           <details><summary><span>Adaptive Detail Budget</span><small>Distance-aware cost control</small></summary><div class="details-body"><p>Full Detail Distance sets the near range. Reduced Detail Distance sets where the long-range reduction is fully active. Minimum Detail controls how much procedural detail remains at maximum reduction.</p></div></details>
           <details><summary><span>Audio Link</span><small>Material-wide band calibration</small></summary><div class="details-body"><p>Enable AudioLink and tune Base, Low Mid, High Mid, and Treble gains. These values calibrate how AudioLink-driven features react without forcing you to retune every individual feature.</p></div></details>
         </div>
-        <div class="media-grid two"><figure class="media-slot" data-image-id="IMG-19"><span class="media-number">IMG-19</span><div><b>Render Settings UI</b><small>Transparency through Audio Link expanded</small></div></figure><figure class="media-slot" data-image-id="IMG-20"><span class="media-number">IMG-20</span><div><b>Mirror & VRCCam comparison</b><small>Normal view, mirror, and VRCCam with clearly different alternate textures</small></div></figure></div>
+
       </section>
 
       <section id="optimization" class="wiki-section searchable">
@@ -217,54 +196,29 @@
           <article class="info-card"><i>◎</i><h3>Keep the material intentional</h3><p>Disable systems you do not use, prefer Opaque where possible, reduce transparent layers, keep texture sizes appropriate, and use quality/adaptive-detail controls before adding more material slots.</p></article>
           <article class="info-card"><i>△</i><h3>Validate the real context</h3><p>Shader compilation proves structure, not appearance. Check the avatar or object in motion, multiple light directions, several camera distances, VRChat mirrors, VRCCam, and every transparency mode you plan to ship.</p></article>
         </div>
-        <div class="callout good"><b>Lock Optimized Shader before upload</b><p>Click <b>Lock Optimized Shader</b> in the material inspector to build and cache a shader tailored to the material's enabled features. The optimizer preserves animated properties and animation-swapped materials while removing unused optional passes and fixed variants. Click <b>Unlock Optimized Shader</b> before changing the feature layout. Automatic locking during VRChat avatar upload is enabled by default; pre-lock materials when you want the one-time compilation to finish before the upload build starts.</p></div>
-        <figure class="media-slot media-slot--wide" data-image-id="IMG-21"><span class="media-number">IMG-21</span><div><b>Quality-tier comparison</b><small>Same material at Potato, Crowd, Balanced, Showcase, and Cinematic</small></div></figure>
+        <div class="callout good"><b>Shader Master: Lock Optimized Shader before upload</b><p>Click <b>Lock Optimized Shader</b> in the material inspector to build and cache a shader tailored to the material's enabled features. The optimizer preserves animated properties and animation-swapped materials while removing unused optional passes and fixed variants. Click <b>Unlock Optimized Shader</b> before changing the feature layout. Automatic locking during VRChat avatar upload is enabled by default; pre-lock materials when you want the one-time compilation to finish before the upload build starts.</p></div>
+
       </section>
 
       <section id="troubleshooting" class="wiki-section searchable">
         <div class="section-heading"><span class="section-kicker">Problem solving</span><h2>Troubleshooting</h2></div>
         <div class="faq-list">
-          <details><summary>The material is pink or the inspector is missing.</summary><div><p>Confirm the project is using a supported Unity version, the complete Shader Master by MSage folder imported successfully, and the material’s shader is <code>MSage Shaders/Shader Master</code>. Check Unity Console compilation errors before changing material values.</p></div></details>
+          <details><summary>The material is pink or the inspector is missing.</summary><div><p>Confirm the project is using a supported Unity version, both complete product folders imported successfully, and the material uses the intended shader under <code>MSage Shaders</code>. Check Unity Console compilation errors before changing material values.</p></div></details>
           <details><summary>Transparency or an outline looks wrong.</summary><div><p>Test Opaque, Clipping, Clipping Transparent, Fade, and Transparent separately. Then check Alpha Map, Base Color alpha, Use Transparency, Alpha Cutoff, Cull, ZTest, ZWrite, the selected Outline Type, and its outline-specific depth/culling controls.</p></div></details>
           <details><summary>A texture moves, stretches, or samples the wrong area.</summary><div><p>Check Tiling and Offset, Panning, and UV Map inside that texture’s subsection. Panning should be zero for a stationary texture. Verify the mesh actually contains the UV channel selected.</p></div></details>
           <details><summary>An effect is visible normally but missing in a mirror or VRCCam.</summary><div><p>Open Mirror & VRCCam Visability and verify the effect’s Appear in Mirror and Appear in VRCCam values. Also test Alt Textures and influence values. Unity Scene view is not a replacement for testing those actual VRChat passes.</p></div></details>
           <details><summary>Audio-reactive controls do not move.</summary><div><p>Enable the main Audio Link section, confirm AudioLink exists and is active in the environment, choose the correct frequency band inside the feature, and increase both the relevant per-feature range and global band gain.</p></div></details>
           <details><summary>Text is clipped, missing, or uses the wrong characters.</summary><div><p>Use a compatible Text Tools font atlas, stay within the section’s character limit, verify width/height/padding and alignment, and regenerate Large Tag content after edits. Unsupported characters may be replaced with a question mark.</p></div></details>
           <details><summary>A copied section will not paste.</summary><div><p>Copy from the same category or section scope on another material using the same shader. Paste intentionally stays disabled for mismatched scopes or incompatible shaders.</p></div></details>
-          <details><summary>My tooltip edit does not appear.</summary><div><p>Save <code>Assets/Shader Master by MSage/Editor/ShaderMasterTooltips.txt</code>, return to Unity, and allow the asset import to finish. Keep the <code>key = text</code> format and avoid removing the key before the equals sign.</p></div></details>
+          <details><summary>My tooltip edit does not appear.</summary><div><p>Save <code>Assets/MSage Shaders/Editor/ShaderMasterTooltips.txt</code>, return to Unity, and allow the asset import to finish. Keep the <code>key = text</code> format and avoid removing the key before the equals sign.</p></div></details>
         </div>
       </section>
 
-      <section id="image-plan" class="wiki-section searchable">
-        <div class="section-heading"><span class="section-kicker">Next collaboration step</span><h2>Planned image set</h2><p>The numbered placeholders above are deliberate. Supply the images below and they can be cropped, captioned, and fitted into the final page without changing the written structure.</p></div>
-        <div class="image-request-list">
-          <article><b>IMG-01</b><span>Hero showcase render</span><small>16:10 landscape, clean background, strongest overall shader look.</small></article>
-          <article><b>IMG-02</b><span>Shader selection</span><small>Unity Inspector showing MSage Shaders/Shader Master in the Shader menu.</small></article>
-          <article><b>IMG-03</b><span>Clean first material</span><small>Main category with base, normal, and alpha setup visible.</small></article>
-          <article><b>IMG-04</b><span>Inspector anatomy</span><small>Tall screenshot with every header action and search visible.</small></article>
-          <article><b>IMG-05</b><span>Main category UI</span><small>Main Textures, Emissions, MatCaps, adjustments.</small></article>
-          <article><b>IMG-06</b><span>Emission and MatCap comparison</span><small>One model, clear before/after or labeled split.</small></article>
-          <article><b>IMG-07</b><span>Shading UI</span><small>Shadows and Rim Lighting expanded.</small></article>
-          <article><b>IMG-08</b><span>Surface comparison</span><small>Metal, jewelry, weathering, skin, cloth, wetness.</small></article>
-          <article><b>IMG-09</b><span>Special Effects UI</span><small>All ten effect headers visible.</small></article>
-          <article><b>IMG-10</b><span>Effects showcase grid</span><small>Ten labeled examples with the same model and camera.</small></article>
-          <article><b>IMG-11</b><span>Galaxy close-up</span><small>Nebula, stars, and edge transition clearly visible.</small></article>
-          <article><b>IMG-12</b><span>PlayStation close-up</span><small>Snap, wobble, dither, and scanline artifacts.</small></article>
-          <article><b>IMG-13</b><span>Hologram close-up</span><small>Glyphs, scanlines, data bands, glitch, edge glow.</small></article>
-          <article><b>IMG-14</b><span>Text Tools UI</span><small>Three Text Tools sections visible.</small></article>
-          <article><b>IMG-15</b><span>Name Tag examples</span><small>Alignment, sub-text, and icon variations.</small></article>
-          <article><b>IMG-16</b><span>Large and typing text</span><small>Multiline large tag plus typing-animation frame strip.</small></article>
-          <article><b>IMG-17</b><span>Transformation UI</span><small>Preset and all transformation section headers.</small></article>
-          <article><b>IMG-18</b><span>Dissolve sequence</span><small>Five equally spaced progress frames.</small></article>
-          <article><b>IMG-19</b><span>Render Settings UI</span><small>Transparency, VRChat, quality, detail, AudioLink.</small></article>
-          <article><b>IMG-20</b><span>VRChat camera comparison</span><small>Normal, mirror, and VRCCam side by side.</small></article>
-          <article><b>IMG-21</b><span>Quality-tier comparison</span><small>Five matching crops from Potato through Cinematic.</small></article>
-        </div>
-      </section>
+      <section id="release-notes" class="wiki-section searchable"><div class="section-heading"><span class="section-kicker">v0.5.0</span><h2>A complete release, with a clear upgrade path.</h2><p>The collection rebrand adds Basic, the dedicated Text Tools shader, all nine specialist shaders and complete-package export. Shader Master retains its existing shader name and full feature set.</p></div><div class="callout"><b>Compatible paths and identifiers</b><p>The historic <code>Assets/Shader Master by MSage</code> and <code>Assets/Shader Master Effects</code> folders remain for upgrades. Existing materials are not automatically switched. Existing property IDs, GUIDs and generated animation identifiers remain compatible.</p></div><p>Release checks cover Unity 2022.3.22f1 / Direct3D11 rendering and compilation, expanded inspector controls, package content and clean-project import. Uploaded-avatar, VRCCam, mirror, headset and AudioLink-world validation are separate. The collection targets the Built-in Render Pipeline; URP, HDRP and Quest support are not claimed.</p><p><a href="https://github.com/MSage3D/shader-master-by-msage/releases/latest">Download the package and checksum</a> · <a href="https://github.com/MSage3D/shader-master-by-msage/blob/main/CHANGELOG.md">Read the changelog</a> · <a href="https://msage.co/discord">Get support</a></p></section>
 
       <footer class="wiki-footer">
         <img src="assets/msage-logo.png" alt="">
-        <div><b>Shader Master by MSage Wiki</b><span>Built for creators who want control without losing clarity.</span></div>
+        <div><b>MSage Shaders Wiki</b><span>Built for creators who want control without losing clarity.</span></div>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>

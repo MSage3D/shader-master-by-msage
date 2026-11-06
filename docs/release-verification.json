@@ -1,0 +1,49 @@
+{
+  "product": "MSage Shaders",
+  "version": "0.5.0",
+  "date": "2026-11-06",
+  "packageFile": "MSage.Shaders-v0.5.0.unitypackage",
+  "sha256": "a8003b2c7ec26fac55c724c83f8e121e12e0a4b5f303b889ef3bb9cd430008d3",
+  "unity": "2022.3.22f1",
+  "graphicsApi": "Direct3D11",
+  "shaderCount": 12,
+  "shaderNames": [
+    "MSage Shaders/Shader Master",
+    "MSage Shaders/Basic",
+    "MSage Shaders/Text Tools",
+    "MSage Shaders/Galaxy",
+    "MSage Shaders/Glitter",
+    "MSage Shaders/Force Field",
+    "MSage Shaders/PlayStation",
+    "MSage Shaders/Hologram",
+    "MSage Shaders/Eye",
+    "MSage Shaders/Dream",
+    "MSage Shaders/Temporal Split",
+    "MSage Shaders/Living Illustration"
+  ],
+  "checks": {
+    "shaderPassCompilation": true,
+    "shaderRendering": true,
+    "basicShadowModes": 5,
+    "textToolsModes": 3,
+    "expandedInspectorChecks": 72,
+    "actualDevelopmentProjectExport": true,
+    "archiveMatchesDevelopmentAssets": true,
+    "cleanPackageImport": true,
+    "allPackageGuidDependenciesPresent": true,
+    "taraSdkRequired": false,
+    "desktopAndMobileDocs": true,
+    "docsFilterChecks": 3,
+    "docsSearch": true,
+    "docsBrokenImages": 0,
+    "docsBrokenAnchors": 0
+  },
+  "notVerified": [
+    "Uploaded VRChat avatar",
+    "VRChat mirrors and VRCCam",
+    "Headset runtime",
+    "AudioLink world",
+    "URP/HDRP",
+    "Quest/Android"
+  ]
+}

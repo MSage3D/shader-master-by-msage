@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.0 — MSage Shaders
+
+- Rebranded the complete collection as MSage Shaders while keeping Shader Master as its all-features shader.
+- Bundled 12 selectable shaders in one complete Unity package: Shader Master, Basic, Text Tools and nine dedicated effect shaders.
+- Copied Tara Stick Figure SDK Basic into an independent Basic shader and inspector without changing the SDK copy.
+- Added dedicated Text Tools with Name Tags, Large Tags, Typing Text Variations, font atlases, sub-text, icons and layout controls.
+- Retained effect-specific Main and Shading controls, with optional Outline FX.
+- Added collection example materials and updated Name Tag prefab creation to use Text Tools.
+- Rebranded Unity menus, dialogs, update messages, inspector attribution and full-package export.
+- Extended Creator Tools material targeting to the MSage Shaders family; conversion and optimized locking remain scoped to Shader Master.
+- Preserved existing asset paths, GUIDs, material properties, shader identity and generated animation identifiers.
+- Rebuilt the GitHub overview and shader catalogue, updated the interactive wiki, and added package integrity information.
+
 ## 0.4.37
 
 - Reworked locked shaders into a portable companion set instead of embedding every support feature into one oversized `.shader` file.

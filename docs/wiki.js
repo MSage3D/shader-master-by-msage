@@ -103,3 +103,13 @@
     tryExtension(0);
   });
 })();
+
+(() => {
+  const filter=document.querySelector('#shader-filter');
+  const cards=[...document.querySelectorAll('[data-shader-kind]')];
+  filter?.addEventListener('change',()=>{
+    let count=0;
+    for(const card of cards){card.hidden=filter.value!=='all'&&card.dataset.shaderKind!==filter.value;if(!card.hidden)count++;}
+    document.querySelector('#shader-count').textContent=count+' shader'+(count===1?'':'s');
+  });
+})();

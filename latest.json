@@ -1,6 +1,8 @@
 {
-    "version": "0.4.37",
-    "releaseUrl": "https://github.com/MSage3D/shader-master-by-msage/releases/tag/v0.4.37",
-    "packageFile": "Shader.Master.by.MSage-v0.4.37.unitypackage",
-    "sha256": "C82606AD7DA106E7F33A290C4062E70BA5AE92875DD27C7207DFC812B73A783D"
+    "product": "MSage Shaders",
+    "version": "0.5.0",
+    "releaseUrl": "https://github.com/MSage3D/shader-master-by-msage/releases/tag/v0.5.0",
+    "packageFile": "MSage.Shaders-v0.5.0.unitypackage",
+    "sha256": "a8003b2c7ec26fac55c724c83f8e121e12e0a4b5f303b889ef3bb9cd430008d3",
+    "shaderCount": 12
 }

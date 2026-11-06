@@ -1,27 +1,16 @@
-# Shader Master Support
+# MSage Shaders Support
 
-Join the [MSage Discord](https://msage.co/discord) to connect with the community and become a supporter of continued Shader Master development.
+Join the [MSage Discord](https://msage.co/discord) for the community and supporter options. Read the [shader guide](https://msage3d.github.io/shader-master-by-msage/) before reporting a problem.
 
-## Before requesting help
+## Include in a report
 
-1. Confirm the issue still occurs on the latest published version.
-2. Clear the Unity Console and reproduce it once.
-3. Test on a duplicate material, controller, or avatar whenever possible.
-4. Check the interactive wiki and troubleshooting section.
+- Collection version and exact shader name (Shader Master, Basic, Text Tools or the named effect).
+- Unity version, render pipeline and target platform.
+- VRChat SDK version, when relevant.
+- Complete Console error, reproduction steps, expected and actual behavior.
+- Whether the issue occurs in Scene view, Game view, a mirror, VRCCam or an uploaded avatar.
+- A screenshot of the relevant material settings.
 
-## Include in a useful report
+Confirm both package folders imported, allow compilation to finish, and reproduce on a duplicate material. A missing font or inspector often means only part of the full package was imported. Basic in this collection does not require Tara Stick Figure SDK.
 
-- Shader Master version
-- Unity version
-- VRChat SDK version, if installed
-- Platform target: Windows/PC or Android/Quest
-- Exact Console error and complete stack trace
-- Steps that reproduce the problem
-- Expected and actual behavior
-- Screenshots showing the relevant inspector settings
-
-Do not upload paid product files, private avatar packages, account credentials, API keys, or personal information to a public issue.
-
-## Support scope
-
-Support covers reproducible Shader Master product defects and documentation corrections. It does not include custom avatar work, installation services, private tutoring, third-party shader conversion guarantees, or debugging unrelated project content.
+Do not upload proprietary product files, private avatars, credentials or personal information to public issues. Support covers reproducible collection defects and documentation corrections. It does not include custom avatar authoring, third-party conversion guarantees, URP/HDRP support or unrelated project debugging.
